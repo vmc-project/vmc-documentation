@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Geant3 &#43; VMC on VMC</title>
-    <link>http://ihrivnac.github.io/geant3&#43;vmc/</link>
+    <link>/geant3&#43;vmc/</link>
     <description>Recent content in Geant3 &#43; VMC on VMC</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://ihrivnac.github.io/geant3+vmc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/geant3+vmc/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
