@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://ihrivnac.github.io"
 languageCode = "en-us"
 title = "VMC"
 
@@ -13,4 +13,7 @@ home = [ "HTML", "RSS", "JSON"]
 [params]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "blue"
+
+# This tells Hugo where to create our HTML files from the content in our 
+# publishDir = "ihrivnac.github.io" 
 
