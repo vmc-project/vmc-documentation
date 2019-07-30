@@ -1,0 +1,12 @@
+# pack-refs with: peeled fully-peeled sorted 
+62e59b1158ebfc37405a38996b602085cdc69afb refs/remotes/origin/ideasUrl
+15eb41a107de4701278f22ec7b65393155cae2c0 refs/remotes/origin/master
+7d329a7a0769a3c8e1bb718f78ae22f7ae3ce449 refs/remotes/origin/matalo33-patch-1
+441dba832dfbbb8520617dc49e755de3510caf7b refs/remotes/origin/rm-old-deps
+a034f581366ce90c60f7818e35d0d3779b7f9ef7 refs/remotes/origin/werker-hugo-version
+4257ec0471e91a952aa897bf7cccf0dd2608173b refs/tags/1.0.0
+27b99f0f181ea4c7e3a3d01bed4b68c3f5a090ec refs/tags/1.1.0
+375e7c0005b46d6cc400934d0608b4eec67abf0d refs/tags/2.0.0
+300c1614ecaafac594cc7e6679006d13bc56ba18 refs/tags/2.1.0
+7f5e927f0c5c782fc8657951ead095e8adf86fe3 refs/tags/2.2.0
+6d1ac48fb5dbbc354a260a44503b0440c555f7f5 refs/tags/2.3.0
