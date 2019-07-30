@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>VMC</title>
-    <link>http://example.org/vmc/</link>
+    <link>http://ihrivnac.github.io/vmc/</link>
     <description>Recent content on VMC</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://example.org/vmc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ihrivnac.github.io/vmc/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

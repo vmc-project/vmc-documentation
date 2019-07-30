@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>G4Root on VMC</title>
-    <link>http://example.org/g4root/</link>
+    <link>http://ihrivnac.github.io/g4root/</link>
     <description>Recent content in G4Root on VMC</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://example.org/g4root/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ihrivnac.github.io/g4root/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

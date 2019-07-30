@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Support on VMC</title>
-    <link>http://example.org/support/</link>
+    <link>http://ihrivnac.github.io/support/</link>
     <description>Recent content in Support on VMC</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://example.org/support/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ihrivnac.github.io/support/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mailing List</title>
-      <link>http://example.org/support/mailing-list/</link>
+      <link>http://ihrivnac.github.io/support/mailing-list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/support/mailing-list/</guid>
+      <guid>http://ihrivnac.github.io/support/mailing-list/</guid>
       <description>The mailing list is used to keep you up to date about new developments in VMC packages, releases and bug fixes. This list is also used to discuss use of VMC with other users and with the developers. If you want to report a bug, please, use Bug Reports page. To join the root-vmc@cern.ch mailing list, do the following: If you don&#39;t have a CERN account, create a light weight CERN account.</description>
     </item>
     
     <item>
       <title>Bug Reports</title>
-      <link>http://example.org/support/bug-reports/</link>
+      <link>http://ihrivnac.github.io/support/bug-reports/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/support/bug-reports/</guid>
+      <guid>http://ihrivnac.github.io/support/bug-reports/</guid>
       <description>We use JIRA to track bugs and to gather feature requests.
  If you are new to using JIRA, you might want to read the ROOT Bug Tracker page first.
  Report a bug in VMC packages.

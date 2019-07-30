@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Installing and Running Examples on VMC</title>
-    <link>http://example.org/installation/examples/</link>
+    <link>http://ihrivnac.github.io/installation/examples/</link>
     <description>Recent content in Installing and Running Examples on VMC</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://example.org/installation/examples/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ihrivnac.github.io/installation/examples/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Building examples application programs - With 3.00.b01</title>
-      <link>http://example.org/installation/examples/examples-old/</link>
+      <link>http://ihrivnac.github.io/installation/examples/examples-old/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/installation/examples/examples-old/</guid>
+      <guid>http://ihrivnac.github.io/installation/examples/examples-old/</guid>
       <description>The following instructions apply only to 3.00.b01 (beta) version and are kept for reference purpose only. For the production version (3.0) see Installing and Running Examples page.  Since Geant4 VMC 3.0.x, there are also provided examples main programs which can be built with either shared or static libraries of all packages. Building with static libraries can make execution faster, especially when running in multi-threaded mode, than when running with dynamic loading of shared libraries in a &#34;</description>
     </item>
     
