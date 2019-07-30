@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Installing Geant4 VMC on VMC</title>
+    <link>http://example.org/installation/geant4_vmc/</link>
+    <description>Recent content in Installing Geant4 VMC on VMC</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/installation/geant4_vmc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installing Geant4 VMC - Older Versions</title>
+      <link>http://example.org/installation/geant4_vmc/geant4_vmc-old/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/installation/geant4_vmc/geant4_vmc-old/</guid>
+      <description>The following instructions apply to the installation of versions &amp;lt; 3.0. For the required configurations of Root and Geant4 for these older versions see Special installations  page.
+  Getting source   First get the Geant4 VMC source from the Download page.  Root configuration  Since the version 2.9 there are no special configuration options for Root needed.  The path to Root installation can be defined in two complementary ways:</description>
+    </item>
+    
+    <item>
+      <title>Installing Geant4 VMC - Special Installations</title>
+      <link>http://example.org/installation/geant4_vmc/special-installations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/installation/geant4_vmc/special-installations/</guid>
+      <description>Root Configuration for geant4_vmc versions (2.x - 2.8)  The older geant4_vmc versions (2.x - 2.8) require Root to be configured with g4root package; for this you have to specify the following configure options:
+ &amp;ndash;enable-g4root &amp;ndash;with-g4-incdir=$G4INSTALL/include &amp;ndash;with-g4-libdir=$G4INSTALL/lib/Linux-g++ &amp;ndash;with-clhep-incdir=$CLHEP_BASE_DIR/include \ 
+
+&amp;lt;li&amp;gt; &amp;lt;h3&amp;gt;Geant4 configuration (version &amp;gt;= 9.5) &amp;lt;br&amp;gt; with manual installation (with GNUmake) &amp;lt;/h3&amp;gt;  If you install Geant4 with the GNUmakefile build system and your own environment setting, you need to have set the following environment variables.</description>
+    </item>
+    
+  </channel>
+</rss>

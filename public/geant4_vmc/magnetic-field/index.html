@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Magnetic Field :: VMC</title>
+
+    
+    <link href="/css/nucleus.css?1564489833" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1564489833" rel="stylesheet">
+    <link href="/css/hybrid.css?1564489833" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1564489833" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1564489833" rel="stylesheet">
+    <link href="/css/auto-complete.css?1564489833" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1564489833" rel="stylesheet">
+    <link href="/css/theme.css?1564489833" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1564489833" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1564489833" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1564489833"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/geant4_vmc/magnetic-field/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <img src="/images/VMClogo6.png" width=80% />
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1564489833"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1564489833"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/example.org\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1564489833"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/download/" title="" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/download/">
+          <b>1. </b>Download
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/installation/" title="Installation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/installation/">
+          <b>2. </b>Installation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/installation/vmc/" title="Installing VMC" class="dd-item ">
+        <a href="/installation/vmc/">
+        VMC
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/installation/geant3/" title="Installing Geant3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/installation/geant3/">
+          Geant3
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/installation/geant4_vmc/" title="Installing Geant4 VMC" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/installation/geant4_vmc/">
+          Geant4 VMC
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/installation/examples/" title="Installing and Running Examples" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/installation/examples/">
+          Examples
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/vmc/" title="VMC" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vmc/">
+          <b>3. </b>VMC
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/examples/" title="" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/examples/">
+          <b>4. </b>Examples
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/geant4_vmc/" title="Geant4 VMC" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/geant4_vmc/">
+          <b>5. </b>Geant4 VMC
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/geometry-definition-navigation/" title="Geometry Definition &amp; Navigation" class="dd-item ">
+        <a href="/geant4_vmc/geometry-definition-navigation/">
+        Geometry Definition &amp; Navigation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/magnetic-field/" title="Magnetic Field" class="dd-item active">
+        <a href="/geant4_vmc/magnetic-field/">
+        Magnetic Field
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/sensitive-volumes/" title="Sensitive Detectors and Volumes" class="dd-item ">
+        <a href="/geant4_vmc/sensitive-volumes/">
+        Sensitive Detectors and Volumes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/physics-lists/" title="Physics Lists" class="dd-item ">
+        <a href="/geant4_vmc/physics-lists/">
+        Physics Lists
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/stacking-of-particles/" title="Stacking of Particles" class="dd-item ">
+        <a href="/geant4_vmc/stacking-of-particles/">
+        Stacking of Particles
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/special-cuts-and-regions/" title="Special Cuts and Regions" class="dd-item ">
+        <a href="/geant4_vmc/special-cuts-and-regions/">
+        Special Cuts and Regions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/user-geant4-classes/" title="User Geant4 Classes" class="dd-item ">
+        <a href="/geant4_vmc/user-geant4-classes/">
+        User Geant4 Classes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/visualization/" title="Visualization" class="dd-item ">
+        <a href="/geant4_vmc/visualization/">
+        Visualization
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/switching-user-interfaces/" title="Switching User Interfaces" class="dd-item ">
+        <a href="/geant4_vmc/switching-user-interfaces/">
+        Switching User Interfaces
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/multi-threaded-processing/" title="Multi-threaded Processing" class="dd-item ">
+        <a href="/geant4_vmc/multi-threaded-processing/">
+        Multi-threaded Processing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/verbosity/" title="Vebosity" class="dd-item ">
+        <a href="/geant4_vmc/verbosity/">
+        Vebosity
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/vebosity-for-developers/" title="Vebosity for Developers" class="dd-item ">
+        <a href="/geant4_vmc/vebosity-for-developers/">
+        Vebosity for Developers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/geant4_vmc/source-code-documentation/" title="Source code documentation" class="dd-item ">
+        <a href="/geant4_vmc/source-code-documentation/">
+        Source code documentation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/geant3&#43;vmc/" title="Geant3 &#43; VMC" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/geant3&#43;vmc/">
+          <b>6. </b>Geant3 &#43; VMC
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/g4root/" title="G4Root" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/g4root/">
+          <b>7. </b>G4Root
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mtroot/" title="MTRoot" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mtroot/">
+          <b>8. </b>MTRoot
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/publications/" title="Publications" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/publications/">
+          <b>9. </b>Publications
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/support/" title="Support" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/support/">
+          <b>10. </b>Support
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/support/mailing-list/" title="Mailing List" class="dd-item ">
+        <a href="/support/mailing-list/">
+        Mailing List
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/support/bug-reports/" title="Bug Reports" class="dd-item ">
+        <a href="/support/bug-reports/">
+        Bug Reports
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>VMC Documentation</a> > <a href='/geant4_vmc/'>Geant4 VMC</a> > Magnetic Field
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Magnetic Field
+            </h1>
+          
+
+        
+
+
+
+<p>The user magnetic field is in VMC defined via <a href="http://root.cern.ch/root/html/TVirtualMagField.html"> TVirtualMagField </a> interface and then set to VMC using <a href="http://root.cern.ch/root/html/TVirtualMC.html">TVirtualMC::SetMagField(TVirtualMagField*)</a> function. The propagation of tracks inside the magnetic field in Geant4 can be performed to a user-defined accuracy. See more details at the Geant4 User Guide for Application Developers, <a href="http://geant4.web.cern.ch/geant4/UserDocumentation/UsersGuides/ForApplicationDeveloper/html/ch04s03.html"> section 4.3. Electromagnetic Field </a>. Note that while Geant4 allows magnetic, electric and electromagnetic fields, the VMC is currently limited to magnetic fields only.</p>
+
+<p>Since Geant4 VMC version 3.2, it is possible to define local magnetic fields. The local field is defined in the same way as a global field, via <a href="http://root.cern.ch/root/html/TVirtualMagField.html"> TVirtualMagField </a> interface, but then it has to be associated with a selected volume using <a href="https://root.cern.ch/root/htmldoc/TGeoVolume.html"> TGeoVolume::SetField(TObject*)</a> function. The local magnetic field is applied also to all volume daughters, it is possible to combine a global field with one or more local fields. Note that the local fields are supported only with Geant4 and an equivalent global magnetic field has to be provided for Geant3 simulation.</p>
+
+<p>The local fields defined in Root geometry are not taken into account automatically (to avoid unnecessary processing of the volume tree in applications which do not define local magnetic fields) and their usage has to be activated via: 
+<bash>/mcDet/setIsLocalMagField true 
+</bash></p>
+
+<p>Since Geant4 VMC development version, it is possible to propagate the zero magnetic field defined in tracking media in Geant4 geometry. A local zero magnetic field is set to all logical volumes associated with the tracking medium with 'ifield = 0' if a global magnetic field is defined. This feature (not switched on by default) can be activated via: 
+<bash>/mcDet/setIsZeroMagField true 
+</bash></p>
+
+<p>In Geant4 VMC, user can customize the default integration method and the default accuracy parameters with a set of dedicated commands. It is a user responsibility to choose the type of equation of motion and the integration method compatible with the user field. (The defined commands are not limited to magnetic field only in order to make easier an eventual future extension of VMC to electric and electromagnetic fields.)</p>
+
+<p>The available commands:</p>
+
+<ul>
+    <li> <bash>
+/mcMagField/stepperType stepperType </bash> 
+       Selects the integrator (stepper) of particle's equation of motion; the default stepper is G4ClassicalRK4.</li>
+    <li> <bash>
+/mcMagField/equationType eqType </bash>
+    Selects the type of equation of motion of a particle in a field; the default is G4Mag_UsualEqRhs.</li>
+    <li>
+    <bash>
+/mcMagField/setDeltaIntersection value [unit]
+/mcMagField/setDeltaOneStep value [unit]</bash>
+    These commands set the accuracy parameters delta intersection and delta one step of the G4 Field Manager. Their default values in Geant4 are 0.001*mm and 0.01*mm respectively.</li>
+    <li>
+    <bash>
+/mcMagField/setStepMinimum value [unit]
+/mcMagField/setDeltaChord  value [unit]</bash>
+    These commands set the step minimum and delta chord parameters to G4 Chord Finder. Their default values in Geant4 are 0.01*mm and 0.25*mm respectively.</li>
+    <li>
+    <bash>
+/mcMagField/setMinimumEpsilonStep value
+/mcMagField/setMaximumEpsilonStep value </bash>
+    These commands set the MinimumEpsilonStep and the MaximumEpsilonStep parameters of the G4 Field Manager. Their default values in Geant4 are 5.0e-5 and 0.001 respectively.</li>
+    <li>
+    <bash>
+/mcMagField/setConstDistance value [unit] </bash>
+    This command (available since version 3.2) activates utilizing of a "cached magnetic field". The cached field value (the value from a previous call) is returned in case a new call is performed for a point which distance from a previous one is smaller than the value of the "ConstDistance" parameter.</li>
+</ul>
+
+<p>To customize local field parameters, a command directory for the local field has to be created first using:</p>
+
+<ul>
+    <li>
+    <bash>
+/mcDet/createMagFieldParameters volumeName</bash>
+    </li>
+</ul>
+The same commands as for a global field are then available under this directory:
+
+<ul>
+    <li>
+    <bash>
+/mcMagField/volumeName/stepperType stepperType
+/mcMagField/volumeName/equationType eqType
+...</bash>
+    </li>
+</ul>
+
+<p>How to apply Geant4 commands in a Root user session is explained at the section on <a href="/drupal/content/user-interfaces"> User Interfaces</a>.</p>
+
+<p><p>Since Geant4 VMC version 3.2, users can also provide their own magnetic field equation of motion and/or its integrator. These objects should be instantiated in a detector construction class derived from <a href="http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4DetConstruction.html"> TG4DetConstruction</a>. This use case is demonstrated in the E03 example in <a href="http://ivana.home.cern.ch/ivana/examples_html/classEx03G4DetectorConstruction.html> Ex03G4DetectorConstruction</a> and <a href="http://ivana.home.cern.ch/ivana/examples_html/classEx03RunConfiguration4.html"> Ex03RunConfiguration4</a> classes. How to include user Geant4 classes in a VMC application is explained at the section on  <a href="/drupal/content/user-geant4-classes> User Geant4 classes</a>.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/geant4_vmc/geometry-definition-navigation/" title="Geometry Definition &amp; Navigation"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/geant4_vmc/sensitive-volumes/" title="Sensitive Detectors and Volumes" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1564489833"></script>
+    <script src="/js/perfect-scrollbar.min.js?1564489833"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1564489833"></script>
+    <script src="/js/jquery.sticky.js?1564489833"></script>
+    <script src="/js/featherlight.min.js?1564489833"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1564489833"></script>
+    <script src="/js/highlight.pack.js?1564489833"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1564489833"></script>
+    <script src="/js/learn.js?1564489833"></script>
+    <script src="/js/hugo-learn.js?1564489833"></script>
+
+    <link href="/mermaid/mermaid.css?1564489833" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1564489833"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

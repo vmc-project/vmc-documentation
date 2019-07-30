@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/download/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/installation/examples/examples-old/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/geometry-definition-navigation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/installation/geant3/geant3-old/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/installation/geant4_vmc/geant4_vmc-old/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/installation/vmc/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/magnetic-field/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/support/mailing-list/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/support/bug-reports/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/installation/geant3/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/installation/geant4_vmc/special-installations/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/installation/geant4_vmc/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/installation/examples/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/sensitive-volumes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/vmc/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/examples/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/physics-lists/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/stacking-of-particles/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant3&#43;vmc/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/g4root/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/special-cuts-and-regions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/mtroot/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/user-geant4-classes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/publications/meetings/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/publications/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/visualization/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/support/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/switching-user-interfaces/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/multi-threaded-processing/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/verbosity/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/vebosity-for-developers/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geant4_vmc/source-code-documentation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/_multiple/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+  </url>
+  
+</urlset>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geant3 &#43; VMC on VMC</title>
+    <link>http://example.org/geant3&#43;vmc/</link>
+    <description>Recent content in Geant3 &#43; VMC on VMC</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/geant3+vmc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
