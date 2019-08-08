@@ -3,7 +3,7 @@ title = "Support"
 menuTitle = "Support"
 chapter = true
 weight = 10
-pre = "<b>10. </b>"
+#pre = "<b>10. </b>"
 +++
 
 ### Chapter 10

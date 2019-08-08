@@ -3,10 +3,10 @@ title = "Geant4 VMC"
 menuTitle = "Geant4 VMC"
 chapter = true
 weight = 5
-pre = "<b>5. </b>"
+#pre = "<b>3.2 </b>"
 +++
 
-### Chapter 5
+### Chapter 3.2
 
 # Geant4 VMC
 

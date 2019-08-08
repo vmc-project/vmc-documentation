@@ -1,4 +1,5 @@
-baseURL = "https://ihrivnac.github.io"
+#baseURL = "https://ihrivnac.github.io"
+baseURL = ""
 languageCode = "en-us"
 title = "VMC"
 
@@ -17,3 +18,18 @@ home = [ "HTML", "RSS", "JSON"]
 # This tells Hugo where to create our HTML files from the content in our 
 # publishDir = "ihrivnac.github.io" 
 
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> vmc-project on Github"
+identifier = "ds"
+url = "https://github.com/vmc-project"
+weight = 10
+
+[[menu.shortcuts]] 
+name = "<i class='far fa-copyright'></i> Copyright"
+url = "/copyright"
+weight = 20
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
