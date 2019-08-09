@@ -12,4 +12,4 @@ weight = 2
 
 # Installation
 
-{{% children style="div" depth="999" %}}
+{{% children depth="999" %}}
