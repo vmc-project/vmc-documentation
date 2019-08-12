@@ -9,7 +9,7 @@ weight = 2
 
 Geant3 with VMC requires [ROOT](https://root.cern.ch/).
 
-Since version 2.0, Geant3 with VMC is installed with CMake. To install geant3:
+Since version 2.0, Geant3 with VMC uses [CMake](https://cmake.org/) to configure a build system for compiling and installing the headers, libraries and Cmake configuration files. To install geant3:
 
 1. First get the Geant3 source from the [Download page](/download/geant3). We will assume that the Geant3 package sits in a subdirectory
 ```

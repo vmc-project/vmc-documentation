@@ -7,7 +7,7 @@ weight = 3
 
 Geant4 VMC requires [ROOT](https://root.cern.ch/) and [Geant4](http://geant4.web.cern.ch/) installed, and optionally, it can be built with [VGM](https://github.com/vmc-project/vgm). See below tips for configuration and installation of these packages.
 
-Since version 3.00, Geant4 VMC is installed with CMake. To install geant4_vmc:
+Since version 3.00, Geant4 VMC uses [CMake](https://cmake.org/) to configure a build system for compiling and installing the headers, libraries and Cmake configuration files. To install geant4_vmc:
 
 1. First get the Geant4 VMC source from the  [Download page](/download/geant4_vmc). We will assume that the Geant4 VMC package sits in a subdirectory
 ```
@@ -27,7 +27,7 @@ $ cd /mypath/geant4_vmc_build
 $ cmake -DCMAKE_INSTALL_PREFIX=/mypath/geant4_vmc_install /mypath/geant4_vmc
 ```
 
-  - If ROOT and Geant4 environment was defined using <code>thisroot.[c]sh</code> and <code>geant4.[c]sh</code> scripts, there is no need to provide path to their installations. Otherwise, they can be provided using <code>-DROOT_DIR</code> and <code>-DGeant4_DIR</code> cmake options.
+  - If ROOT and Geant4 environment was defined using `thisroot.[c]sh` and `geant4.[c]sh` scripts, there is no need to provide path to their installations. Otherwise, they can be provided using `-DROOT_DIR` and `-DGeant4_DIR` cmake options.
 
 4. After the configuration has run, CMake will have generated Unix Makefiles for building Geant4 VMC. To run the build, simply execute make in the build directory:
 ```

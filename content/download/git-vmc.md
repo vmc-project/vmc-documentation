@@ -6,13 +6,12 @@ weight = 2
 #pre = "<b>1. </b>"
 +++
 
-<p>Development version (the whole repository):</p>
-
+Development version (the whole repository):
 ```bash 
 git clone http://github.com/vmc-project/vmc.git
 ```
 
-<p> The pro version is under construction.</p>
+The pro version is under construction.
 
 <!--
 <p>To switch to pro tagged version 1.0:</p>

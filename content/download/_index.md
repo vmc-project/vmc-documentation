@@ -10,6 +10,6 @@ weight = 1
 
 # Download
 
-The sources are also from GitHub. See the detailed instruction further.
+The VMC packages sources are available from the [vmc-project](https://github.com/vmc-project) on [GitHub](https://github.com/). See the detailed instructions in the next sections.
 
 {{% children style="div" depth="999" %}}
