@@ -654,7 +654,7 @@ pre {
 pre code {
     color: whitesmoke;
     background: inherit;
-    white-space: pre;
+    white-space: inherit;
     border: 0;
     padding: 0;
     margin: 0;
