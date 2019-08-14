@@ -2,11 +2,11 @@
 title = "Publications"
 menuTitle = "Publications"
 chapter = true
-weight = 9
-#pre = "<b>9. </b>"
+weight = 5
+#pre = "<b>5. </b>"
 +++
 
-### Chapter 9
+### Chapter 5
 
 # Publications
 
