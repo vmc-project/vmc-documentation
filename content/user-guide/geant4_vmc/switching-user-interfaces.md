@@ -12,19 +12,19 @@ The VMC interface provides a common denominator for all implemented MC's and can
 ### From Root to Geant4 UI
 
 Switching UI:
-```cpp
+{{< highlight cpp >}}
 root [0] ((TGeant4*)gMC)->StartGeantUI();
-```
+{{< /highlight >}}
 
 Call Geant4 macro `myMacro.in` from Root:
-```cpp
+{{< highlight cpp >}}
 root [0] ((TGeant4*)gMC)->ProcessGeantMacro("myMacro.in");
-```
+{{< /highlight >}}
 
 Call Geant4 command from Root:
-```cpp
+{{< highlight cpp >}}
 root [0] ((TGeant4*)gMC)->ProcessGeantCommand("/tracking/verbose 1");
-```
+{{< /highlight >}}
 
 ### From Geant4 to Root UI
 

@@ -14,7 +14,7 @@ Since version 3.00, Geant4 VMC supports running Geant4 in multi-threading (MT) m
 The VMC application which has not been migrated to MT should be run in a sequential mode, either with Geant4 VMC built against Geant4 sequential libraries or with Geant4 VMC built against Geant4 MT libraries with disabled multi-threading mode in `TG4RunConfiguration`. Otherwise its run will stop with an exception.
 
 As the VMC classes work as a factory for creating Geant4 application objects (user initialization and user action classes, sensitive detector classes etc.), the main VMC objects: `TGeant4` and `MCApplication` need to be created on both master and worker threads. Creating of all objects on worker threads is triggered from the Geant4 VMC classes. Users need just to implement new functions of `TVirtualMCApplication` which are then used to clone the application and its containing objects on workers:
-```cpp
+{{< highlight cpp >}}
  // required for running in MT
  virtual TVirtualMCApplication* CloneForWorker() const;
  // optional
@@ -22,7 +22,7 @@ As the VMC classes work as a factory for creating Geant4 application objects (us
  virtual void BeginRunOnWorker();
  virtual void FinishRunOnWorker();
  virtual void Merge(TVirtualMCApplication* localMCApplication);
-```
+{{< /highlight >}}
 
 Overriding of `TVirtualMCApplication::CloneForWorker()` is required, 
 implementation of the other functions is optional.

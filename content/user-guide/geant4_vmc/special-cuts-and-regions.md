@@ -14,10 +14,10 @@ Inn Geant4, there is defined a unique cut in range which is then converted to an
 ### VMC cuts
 
 The VMC provides a possibility for a user to define cuts in Geant3 way. The cuts can be defined globally or per tracking medium via the following [TVirtualMC](http://root.cern.ch/root/htmldoc/TVirtualMC.html) functions:
-```cpp
+{{< highlight cpp >}}
 gMC->SetCut(cutname, cutValue);
 gMC->Gstpar(medId, cutName, cutValue);
-```
+{{< /highlight >}}
 
 The user defined VMC cuts and their interpretation in Geant4 can be viewed with the following commands: 
 

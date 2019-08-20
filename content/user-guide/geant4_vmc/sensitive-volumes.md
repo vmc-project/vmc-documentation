@@ -12,19 +12,20 @@ weight = 3
 Recently (since ROOT version v6.13.04) a new interface to user sensitive detector, [TVirtualMCSensitiveDetector](https://root.cern.ch/doc/master/classTVirtualMCSensitiveDetector.html), has been added in the set of VMC interfaces. The support for this new way of definig sensitive detector is available since geant3 2.6 and geant4_vmc 4.0.
 
 The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function:
-```cpp
+{{< highlight cpp >}}
 void TVirtualMCApplication::SetSensitiveDetectors()
-```
+{{< /highlight >}}
+
 using the new TVirtualMC function:
-```cpp
+{{< highlight cpp >}}
 void TVirtualMC::SetSensitiveDetector(
-	const TString&amp; volumeName, 
+	const TString& volumeName,
 	TVirtualMCSensitiveDetector* userSD);
-```
+{{< /highlight >}}
 Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and `MCApplication::Stepping()` using the function
-```cpp
+{{< highlight cpp >}}
 void VirtualMC::SetExclusiveSDScoring(Bool_t);
-```
+{{< /highlight >}}
 If exclusive scoring is selected, the `MCApplication::Stepping()` is not called by MC.
 
 To demonstrate the usage of this new interfaces the **E03 example** was split in two variants:
@@ -40,22 +41,22 @@ The selection of sensitive volumes can be done in two ways:
 
 1. Via the following Geant4 VMC command:
    ```
-   /mcDet/addSDSelection volName1 [volName2 ...]
+/mcDet/addSDSelection volName1 [volName2 ...]
    ```
    The command can be applied more times, the new selection is each time added to the existing ones.
 
 2. Via labeling volumes directly in TGeo geometry. In this case, user has to notify Geant4 VMC about using the sensitive volumes selection from TGeo by applying Geant4 VMC command: 
    ```
-   /mcDet/setSDSelectionFromTGeo true
+/mcDet/setSDSelectionFromTGeo true
    ```
    The volumes in TGeo geometry are set sensitive by setting the option "SV" to TGeoVolume objects: 
-   ```cpp
-   TGeoVolume* myVolume = ...;
-   myVolume->SetOption("SV");
-   ```
+   {{< highlight cpp >}}
+TGeoVolume* myVolume = ...;
+myVolume->SetOption("SV");
+   {{< /highlight >}}
    User can also choose a different string than "SV" for sensitive volumes labeling. In this case, they have to notify Geant4 VMC about the label via the Geant4 VMC command: 
    ```
-   /mcDet/setSVLabel MyLabel
+/mcDet/setSVLabel MyLabel
    ```
    Note that the option set via `TGeoVolume::SetOption` function is not persistent.
 
