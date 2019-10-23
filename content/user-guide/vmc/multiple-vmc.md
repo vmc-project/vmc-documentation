@@ -162,7 +162,7 @@ The geometry is built once centrally via the [TMCManager](https://github.com/vmc
 
 1. `TVirtualMCApplication::ConstructGeometry()`,
 2. `TVirtualMCApplication::MisalignGeometry()`,
-2. `TVirtualMCApplication::ConstructOpGeometry()`
+3. `TVirtualMCApplication::ConstructOpGeometry()`
 
 and therefore, it is expected that these methods do not depend on any engine.
 
