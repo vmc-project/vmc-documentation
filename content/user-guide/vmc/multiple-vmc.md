@@ -67,7 +67,7 @@ Ex03MCApplication::Ex03MCApplication(const char* name, const char* title, Bool_t
         // further construction
 }
 {{< /highlight >}}
-2. At an appropriate stage (i.e. in `UserStack::PushTrack(...)`) you would call `TMCManager::ForwardTrack(...)` to forward the pointer to your newly constructed `TParticle` object.
+1. At an appropriate stage (i.e. in `UserStack::PushTrack(...)`) you would call `TMCManager::ForwardTrack(...)` to forward the pointer to your newly constructed `TParticle` object.
 {{< highlight cpp >}}
 void Ex03MCStack::PushTrack(Int_t toBeDone, Int_t parent, ..., Int_t& ntr, ...)
 {
@@ -82,7 +82,7 @@ void Ex03MCStack::PushTrack(Int_t toBeDone, Int_t parent, ..., Int_t& ntr, ...)
         // further implementations
 }
 {{< /highlight >}}
-3. Whenever needed, check the presence of [`TMCManager`](https://github.com/vmc-project/vmc/blob/master/source/include/TMCManager.h) to decide whether the code should work for single or multi-run, e.g. in the constructor of `Ex03DetectorConstruction` where its member `fMC` is setup to point to the currently running VMC in the multi-run scenario.
+1. Whenever needed, check the presence of [`TMCManager`](https://github.com/vmc-project/vmc/blob/master/source/include/TMCManager.h) to decide whether the code should work for single or multi-run, e.g. in the constructor of `Ex03DetectorConstruction` where its member `fMC` is setup to point to the currently running VMC in the multi-run scenario.
 {{< highlight cpp >}}
 Ex03DetecorConstruction::Ex03DetectorConstruction(...)
 {
@@ -94,7 +94,7 @@ Ex03DetecorConstruction::Ex03DetectorConstruction(...)
         // maybe some more construction
 }
 {{< /highlight >}}
-4. Transfer a track involving `TMCManager::TransferTrack(...)`. If the target VMC ID coincides with the one currently running, nothing will happen and the simulation would just continue.
+1. Transfer a track involving `TMCManager::TransferTrack(...)`. If the target VMC ID coincides with the one currently running, nothing will happen and the simulation would just continue.
 {{< highlight cpp >}}
 Ex03MCApplication::Stepping()
 {
@@ -125,13 +125,13 @@ auto isMulti = true;
 auto splitSimulation = true;
 auto appl = new Ex03MCapplication("multiApplication", "multiApplication", isMulti, splitSimulation);
 {{< /highlight >}}
-2. Instantiate the engines you want to use (these are registered automatically to the manager). In the E03c example this is done in `TVirtualMCApplication::InitMC` but to clarify, it is written here explicitely,
+1. Instantiate the engines you want to use (these are registered automatically to the manager). In the E03c example this is done in `TVirtualMCApplication::InitMC` but to clarify, it is written here explicitely,
 {{< highlight cpp >}}
 auto engine1 = new TGeant3(...);
 auto engine2 = new TGeant4(...);
 // Nothing further to be done
 {{< /highlight >}}
-3. Call `TMCManager::Init(...)` (if needed with your custom initialization procedure, see above; that can of course also be wrapped into another method of your application as it is done here),
+1. Call `TMCManager::Init(...)` (if needed with your custom initialization procedure, see above; that can of course also be wrapped into another method of your application as it is done here),
 {{< highlight cpp >}}
 void Ex03MCApplication::InitMC(std::initializer_list<const char*> setupMacros)
 {
@@ -146,7 +146,7 @@ void Ex03MCApplication::InitMC(std::initializer_list<const char*> setupMacros)
 }
 {{< /highlight >}}
 The lambda argument will be called for each registered VMC separately. If necessary, it can be more specific. Instead of passing a lambda function, a function pointer could be given or also an object. The only requirement is that what is passed implements a `()` operator taking a VMC pointer as an argument.
-4. Call `TMCManager::Run(...)` specifying the desired number of events to be simulated.
+1. Call `TMCManager::Run(...)` specifying the desired number of events to be simulated.
 {{< highlight cpp >}}
 void Ex03MCApplication::RunMC(Int_t nofEvents)
 {
