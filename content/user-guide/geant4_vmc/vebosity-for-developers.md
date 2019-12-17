@@ -1,5 +1,5 @@
 +++
-title = "Vebosity for Developers"
+title = "Verbosity for Developers"
 menuTitle = ""
 chapter = false
 hidden = false

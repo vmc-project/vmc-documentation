@@ -1,5 +1,5 @@
 +++
-title = "Vebosity"
+title = "Verbosity"
 menuTitle = ""
 chapter = false
 hidden = false
