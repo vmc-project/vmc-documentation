@@ -10,10 +10,9 @@ VMC requires [ROOT](https://root.cern.ch/).
 VMC uses [CMake](https://cmake.org/) to configure a build system for compiling and installing the headers, libraries and Cmake configuration files. To install VMC:
 
 1. First get the VMC source from the [Download page](/download/vmc). We will assume that the VMC package sits in a subdirectory
-{{< highlight text >}}
+```
 /mypath/vmc
-{{< /highlight >}}
-
+```
 
 2. Create build directory alongside our source directory
 ```

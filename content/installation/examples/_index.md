@@ -10,7 +10,7 @@ weight = 3
 
 The following instructions apply to the installation since the version 3.00. Since this 3.00, VMC examples are installed with CMake. 
 
-The VMC examples libraries require [ROOT](https://root.cern.ch/) installation, the VMC examples programs can be built against Geant3 with VMC or Geant4 VMC libraries.
+The VMC examples libraries require [ROOT](https://root.cern.ch/) installation, the VMC examples programs can be built against Geant3 with VMC or Geant4 VMC libraries. Only the examples with the multiple engine mode (at present only E03c) can be built with both Geant3 and Geant4 VMC libraries. The `VMC_WITH_Multi` CMake option has to be set, too, in this special case. 
 
 By default, the VMC examples libraries and the VMC examples programs are built against Geant4 VMC libraries together with Geant4 VMC installation. Below we provide the instructions how to build VMC examples altogether outside Geant4 VMC. The analogous instructions can be used to build each example individually or to build a user application. 
 
@@ -57,6 +57,18 @@ $ cd /mypath/example_build_g3
 $ cmake -DCMAKE_INSTALL_PREFIX=/mypath/examples_install_g3 \
     -DVMC_WITH_Geant3=ON \
     -DGeant3_DIR=/mypath/geant3_install/lib[64]/Geant3-2.0.0 \
+    -DPythia6_LIB_DIR=/my_path_to_pythia6_library \
+    /mypath/geant4_vmc/examples
+{{< /highlight >}}
+or with  `VMC_WITH_Multi`,
+{{< highlight bash >}}
+$ cd /mypath/example_build_multi
+$ cmake -DCMAKE_INSTALL_PREFIX=/mypath/examples_install_multi \
+    -DVMC_WITH_Geant3=ON \
+    -DVMC_WITH_Geant4=ON \
+    -DVMC_WITH_Multi=ON \
+    -DGeant3_DIR=/mypath/geant3_install/lib[64]/Geant3-2.0.0 \
+    -DGeant4VMC_DIR=/mypath/geant4_vmc_install/lib[64]/Geant4VMC-3.0.0 \
     -DPythia6_LIB_DIR=/my_path_to_pythia6_library \
     /mypath/geant4_vmc/examples
 {{< /highlight >}}

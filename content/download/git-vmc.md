@@ -11,8 +11,7 @@ Development version (the whole repository):
 git clone http://github.com/vmc-project/vmc.git
 ```
 
-The pro version is under construction.
-
+The 'pro' version is under construction.
 <!--
 <p>To switch to pro tagged version 1.0:</p>
 

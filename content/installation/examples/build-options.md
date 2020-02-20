@@ -7,9 +7,10 @@ weight = 1
 
 Overview of the available options for building VMC examples and their default values:
 ```
-VMC_WITH_Geant4       Build with Geant4   OFF
-VMC_WITH_Geant3       Build with Geant3   OFF
-VMC_WITH_MTRoot       Build with MTRoot   ON
+VMC_WITH_Geant4       Build with Geant4            OFF
+VMC_WITH_Geant3       Build with Geant3            OFF
+VMC_WITH_Multi        Build with multiple engines  OFF
+VMC_WITH_MTRoot       Build with MTRoot            ON
 VMC_INSTALL_EXAMPLES  Install examples libraries and programs  ON
 ```
 

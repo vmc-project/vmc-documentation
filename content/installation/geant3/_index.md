@@ -29,11 +29,11 @@ $ ls
 $ cd /mypath/geant3_build 
 $ cmake -DCMAKE_INSTALL_PREFIX=/mypath/geant3_install /mypath/geant3
 ```
-  - If ROOT environment was defined using <code>thisroot.{c}sh</code> script, there is no need to provide the path to its installation. Otherwise, they can be provided using <code>-DROOT_DIR</code> cmake option.
+  - If ROOT environment was defined using `thisroot.{c}sh` script, there is no need to provide the path to its installation. Otherwise, they can be provided using `-DROOT_DIR` cmake option.
 
-  - Since version 2.1, the Geant3 library is built by default in <code>RelWithDebInfo</code> build mode (Optimized build with debugging symbols). This default can be changed via the standard CMake option <code>CMAKE_BUILD_TYPE</code>. The other useful values are <br>
-      - <code>Release</code> : Optimized build, no debugging symbols <br>
-      - <code>Debug</code> : Debugging symbols, no optimization <br>
+  - Since version 2.1, the Geant3 library is built by default in `RelWithDebInfo` build mode (Optimized build with debugging symbols). This default can be changed via the standard CMake option `CMAKE_BUILD_TYPE`. The other useful values are <br>
+      - `Release` : Optimized build, no debugging symbols <br>
+      - `Debug` : Debugging symbols, no optimization <br>
 
 4. After the configuration has run, CMake will have generated Unix Makefiles for building Geant3. To run the build, simply execute make in the build directory:
 ```
