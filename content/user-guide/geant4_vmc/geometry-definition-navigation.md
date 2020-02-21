@@ -12,7 +12,7 @@ weight = 1
 The VMC supports two ways of geometry definition:
 
 - via [Root geometry package (TGeo)](http://root.cern.ch/root/doc/chapter19.pdf)
-- via [TVirtualMC interface](https://root.cern/doc/master/classTVirtualMC.html) (historically the first way)
+- via [TVirtualMC interface](https://vmc-project.github.io/vmc/html/classTVirtualMC.html) (historically the first way)
 
 The first (newer) way is recommended for new users, the way via VMC is kept for a backward compatibility.
 

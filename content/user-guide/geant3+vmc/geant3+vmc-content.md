@@ -7,7 +7,7 @@ weight = 6
 +++
 
 {{% notice warning %}}
-Only the **Geant3.21** code itself and the implementation of the [TVirtualMC](https://root.cern/doc/master/classTVirtualMC.html) interface, **TGeant3**, provided in [geant3](https://github.com/vmc-project/geant3) are maintained by the VMC project.
+Only the **Geant3.21** code itself and the implementation of the [TVirtualMC](https://vmc-project.github.io/vmc/html/classTVirtualMC.html) interface, **TGeant3**, provided in [geant3](https://github.com/vmc-project/geant3) are maintained by the VMC project.
 {{% /notice %}}
 
 ### Geant3.21
