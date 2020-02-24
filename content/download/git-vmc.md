@@ -11,12 +11,10 @@ Development version (the whole repository):
 git clone http://github.com/vmc-project/vmc.git
 ```
 
-The 'pro' version is under construction.
-<!--
-<p>To switch to pro tagged version 1.0:</p>
+To switch to pro tagged version 1.0:
 
 ```bash
 cd vmc
 git checkout v1-0
 ```
--->
+The list of new developments, bug fixes and the required versions of ROOT and Geant4 for each version can be found in the [History](https://github.com/vmc-project/vmc/blob/master/History) file.

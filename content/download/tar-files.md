@@ -10,11 +10,12 @@ weight = 5
 
 | Package | Version | Tar file | Tested with |
 |---------|---------|----------| ------------|
-| vmc | 0.1 (\*) | [v0-1.tar.gz](https://github.com/vmc-project/vmc/archive/v0-1.tar.gz) | *ROOT v6.18.00* |
-| geant3 | 2.7 | [v2-7.tar.gz](https://github.com/vmc-project/geant3/archive/v2-7.tar.gz) | *ROOT 6.14.06* |
-| geant4_vmc | 4.0.p3 | [v4-0-p3.tar.gz](https://github.com/vmc-project/geant4_vmc/archive/v4-0-p3.tar.gz) | *ROOT 6.18.04,<br> Geant4 10.5.p01 (with embedded CLHEP 2.4.1.0), <br> VGM 4.4 and 4.6, <br> Garfield master at c5efc3e352101b59e*
+| vmc | 1.0 | [v1-0.tar.gz](https://github.com/vmc-project/vmc/archive/v1-0.tar.gz) | *ROOT 6.18/04 (\*)* |
+| geant3 | 3.0 | [v3-0.tar.gz](https://github.com/vmc-project/geant3/archive/v3-0.tar.gz) | *ROOT 6.18/04 (\*)* |
+| geant4_vmc | 5.0 | [v5-0.tar.gz](https://github.com/vmc-project/geant4_vmc/archive/v5-0.tar.gz) | *ROOT 6.18.04 (\*)*,<br> *Geant4 10.5.p01 (with embedded CLHEP 2.4.1.0),* <br> *VGM 4.6,* <br> *Garfield master at c5efc3e352101b59e*|
 
-*(\*) this is development version, the pro version is under construction*
+*(\*)  VMC 1.0 is ahead of the vmc in ROOT 6.18/04. It includes fixes scheduled for the next ROOT tags 6.18/06 and 6.20/00.
+  For this reason, the new multiple engine mode works correctly only with the VMC stand-alone or with vmc in ROOT master or v6-18-patches or v6-20-patches.*
 
 In general, the VMC packages can be built with the Root versions which they were tested with and higher, and Geant4 VMC with the Geant4 version which it was tested with including the patches. Note that the Geant4 patches released after the Geant4 VMC tag do not appear in the table above, it is however recommended to update Geant4 with each patch release.
 
@@ -22,4 +23,4 @@ In general, the VMC packages can be built with the Root versions which they were
 
 | Package | Version | Tar file | Tested with |
 |---------|---------|----------| ------------|
-| geant3 | 2.6 | [v2-6.tar.gz](https://github.com/vmc-project/geant3/archive/v2-6.tar.gz) | *ROOT 5.34.38 and 6.14.06* |
+| geant3 | 2.7 | [v2-7.tar.gz](https://github.com/vmc-project/geant3/archive/v2-7.tar.gz) | *ROOT 6.14.06*  |

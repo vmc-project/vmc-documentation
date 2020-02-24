@@ -11,17 +11,17 @@ Development version (the whole repository):
 git clone http://github.com/vmc-project/geant3.git
 ```
 
-To switch to the 'pro' tagged version 2.7:
+To switch to the 'pro' tagged version 3.0:
 ```bash
+cd geant3 
+git checkout v3-0
+```
+
+To switch to the 'old' tagged version 2.7:<br>
+```bash 
 cd geant3 
 git checkout v2-7
 ```
 
-To switch to the 'old' tagged version 2.6:<br>
-```bash 
-cd geant3 
-git checkout v2-6
-```
-
 For older versions see the correspondent tag and the required version of ROOT in 
-<a href="/root/vmc/geant3+_vmc_versions.txt">the table</a>.
+the [history](https://github.com/vmc-project/geant3/blob/master/history) file.
