@@ -10,4 +10,4 @@ A set of examples of usage of VMC is included in **geant4_vmc**.
 
 Though provided within Geant4 VMC, they can be built independently and do not require Geant4 installation in case you want to run them with GEANT3 only.
 
-See more details on the [VMC Examples](http://ivana.home.cern.ch/ivana/examples_html/html/) web page.
+See more details on the [VMC Examples](http://ivana.home.cern.ch/ivana/examples_html/) web page.
