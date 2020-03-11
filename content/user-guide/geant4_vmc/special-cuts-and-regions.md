@@ -52,7 +52,7 @@ To print the user limits (including the VMC cuts and controls) set for the speci
 
 In order to take the VMC cuts into account, the user has to activate the special cuts process by switching it on in his `g4Config.C` (see the section on [Physics list selection](/user-guide/geant4_vmc/physics_lists). This special cuts process applies the VMC cuts as tracking cuts using `G4UserLimits`.
 
-When the special cuts process is activated, Geant4 VMC defines also regions according to the VMC cuts defined by the user. The regions apply the VMC cuts as an energy threshold. In order to do this, the cut energy has to be converted in range. This conversion is performed in <a href="http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4RegionsManager.html"> TG4RegionsManager </a> using the Geant4 converter classes `G4RToEConvForElectron` and `G4RToEConvForGamma` by iterating within a given range interval up to a given precision. User can change the default precision (2 orders of magnitude) with the command:
+When the special cuts process is activated, Geant4 VMC defines also regions according to the VMC cuts defined by the user. The regions apply the VMC cuts as an energy threshold. In order to do this, the cut energy has to be converted in range. This conversion is performed in [TG4RegionsManager](http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4RegionsManager.html) using the Geant4 converter classes `G4RToEConvForElectron` and `G4RToEConvForGamma` by iterating within a given range interval up to a given precision. User can change the default precision (2 orders of magnitude) with the command:
 ```bash
 /mcRegions/setRangePrecision value
 ```

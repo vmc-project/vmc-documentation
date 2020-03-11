@@ -16,7 +16,7 @@ The VMC supports two ways of geometry definition:
 
 The first (newer) way is recommended for new users, the way via VMC is kept for a backward compatibility.
 
-Since the version 2.0, user can choose between Geant4 native navigation and G4Root navigation, if geometry is define via TGeo. The choice of the navigation is done via the option specified with creating <a href="http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4RunConfiguration.html">  TG4RunConfiguration </a> object (see  <a href="http://ivana.home.cern.ch/ivana/examples_html/index.html">  examples </a> for more details):
+Since the version 2.0, user can choose between Geant4 native navigation and G4Root navigation, if geometry is define via TGeo. The choice of the navigation is done via the option specified with creating [TG4RunConfiguration](http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4RunConfiguration.html) object (see  [VMC examples](http://ivana.home.cern.ch/ivana/examples_html/index.html) for more details):
 
 - `geomVMCtoGeant4`   - geometry defined via VMC, G4 native navigation
 - `geomVMCtoRoot`     - geometry defined via VMC, Root navigation
@@ -36,7 +36,7 @@ Below we shortly comment the implementation of these options:
   If geometry is defined via Root and G4Root navigation is selected, Geant4 VMC only converts the parameters defined in [TGeoMedium](https://root.cern.ch/doc/master/classTGeoMedium.html) objects to Geant4 objects.
 
 - `geomRootToGeant4`:
-  The geometry defined via TGeo is converted in Geant4 geometry using the external <a href="http://ivana.home.cern.ch/ivana/VGM.html"> Virtual Geometry Model </a> (VGM), which has replaced the old one-way converters from Geant4 VMC (G4toXML, RootToG4), removed from Geant4 VMC with the version 1.7. In the VGM, these convertors has been generalized and improved.
+  The geometry defined via TGeo is converted in Geant4 geometry using the external [Virtual Geometry Model](http://ivana.home.cern.ch/ivana/VGM.html) (VGM), which has replaced the old one-way converters from Geant4 VMC (G4toXML, RootToG4), removed from Geant4 VMC with the version 1.7. In the VGM, these convertors has been generalized and improved.
 
 - `geomGeant4`:
   User Geant4 detector construction class can be passed to Geant4 VMC via user defined run configuration class (see [User Geant4 Classes](/user-guide/geant4_vmc/user-geant4-classes)). If Geant4 VMC is built with VGM, geometry can be exported in Root using the built-in command:
@@ -73,7 +73,7 @@ The VGM provides also the XML exporters which enable to generate XML files with 
 ```
 
 If volumeName is not specified, the whole geometry volume tree is exported.
-The geometry can be then browsed and visualized using  <a href="http://hrivnac.home.cern.ch/hrivnac/Activities/Packages/GraXML">  GraXML tool </a>.
+The geometry can be then browsed and visualized using  [GraXML tool](http://hrivnac.home.cern.ch/hrivnac/Activities/Packages/GraXML).
 
 ### "MANY" positions
 
