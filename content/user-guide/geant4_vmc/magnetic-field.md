@@ -73,8 +73,34 @@ The same commands as for a global field are then available under this directory:
 /mcMagField/volumeName/equationType eqType
 ...
 ```
-How to apply Geant4 commands in a Root user session is explained at the section on [Switching User Interfaces](/user-guide/geant4_vmc/switching-user-interfaces).
 
 Since Geant4 VMC version 3.2, users can also provide their own magnetic field equation of motion and/or its integrator. These objects should be instantiated in a detector construction class derived from [TG4DetConstruction](http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4DetConstruction.html). This use case is demonstrated in the E03 example in [Ex03G4DetectorConstruction](http://ivana.home.cern.ch/ivana/examples_html/classEx03G4DetectorConstruction.html) and [Ex03RunConfiguration4](http://ivana.home.cern.ch/ivana/examples_html/classEx03RunConfiguration4.html) classes. How to include user Geant4 classes in a VMC application is explained at the section on  [User Geant4 classes](/user-guide/geant4_vmc/user-geant4-classes).
 
+
+### Control of the parameters for killing looping particles
+
+Since Geant4 10.5, users can change the thresholds for killing ‘looping’ tracks, which criteria can be used to ensure that a track continues to propagate and for how many steps an ‘important’ track that is ‘looping’ can survive (see more details in [Transportation in Magnetic Field - Further Details section](http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/ForApplicationDeveloper/html/Appendix/magneticTransportation.html#fine-grained-control-of-the-parameters-for-killing-looping-particles) in Geant4 Guide for Application Developers).
+
+The following UI commands were introduced in Geant4 VMC development version, and back-ported to Geant4 VMC 5.0.p5, for this control.
+
+The commands for using preset thresholds for killing loopers:
+
+```
+/mcPhysics/useLowLooperThresholds
+/mcPhysics/useHighLooperThresholds
+```
+
+The commands for modifying the parameters for killing looping particles
+
+```
+/mcRun/setLooperThresholdWarningEnergy value unit
+/mcRun/setLooperThresholImportantEnergy value unit
+/mcRun/setNumberOfLooperThresholdTrials value
+```
+
+These commands must be called before the run initialization, so that Geant4 VMC performs the setting at the right time.
+
+----
+
+How to apply Geant4 commands in a Root user session is explained at the section on [Switching User Interfaces](/user-guide/geant4_vmc/switching-user-interfaces).
 
