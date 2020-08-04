@@ -5,12 +5,13 @@ chapter = false
 weight = 2
 +++
 
-Geant4 VMC requires [ROOT](https://root.cern.ch/) and [Geant4](http://geant4.web.cern.ch/) installed, and optionally, it can be built with [VGM](https://github.com/vmc-project/vgm). See below tips for configuration and installation of these packages.
+Geant4 VMC requires [ROOT](https://root.cern.ch/) and [Geant4](http://geant4.web.cern.ch/) installed, then the [VMC core package](/user-guide/vmc/vmc-library) if using ROOT built without `vmc` enabled, and optionally, it can be built with [VGM](https://github.com/vmc-project/vgm). See below tips for configuration and installation of these packages.
 
 The path to required and optional packages installations can be defined in the standard CMake way, via the paths to the CMake configuration file:
 ```
 Geant4_DIR      ... path to Geant4Config.cmake
 ROOT_DIR        ... path to ROOTConfig.cmake
+VMC_DIR         ... path to VMCConfig.cmake
 VGM_DIR         ... path to VGMConfig.cmake
 ```
 
@@ -47,7 +48,7 @@ option, when ROOT is built using CMake, or
 option, when ROOT is built using configure script.
 
 ### Geant4
-To install Geant4 - download the source from [Geant4 Download page](http://geant4.web.cern.ch/geant4/support/download.shtml) and follow the [Geant4 Installation Guide](http://geant4.web.cern.ch/geant4/UserDocumentation/UsersGuides/InstallationGuide/html/index.html) together with the tips relevant to using it with VMC described below.
+To install Geant4 - download the source from [Geant4 Download page](http://geant4.web.cern.ch/support/download) and follow the [Geant4 Installation Guide](http://geant4.web.cern.ch/geant4/UserDocumentation/UsersGuides/InstallationGuide/html/index.html) together with the tips relevant to using it with VMC described below.
 
   - **C++11** <br />
 Geant4 VMC 3.0 - 3.2 built against Geant4 10.0.x or 10.1.x and ROOT 6x requires

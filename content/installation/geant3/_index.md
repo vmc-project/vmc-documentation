@@ -7,11 +7,15 @@ showhidden = true
 weight = 2
 +++
 
-Geant3 with VMC requires [ROOT](https://root.cern.ch/).
+Geant3 with VMC requires the [VMC core package](/user-guide/vmc/vmc-library) and [ROOT](https://root.cern.ch/).
 
-Since version 2.0, Geant3 with VMC uses [CMake](https://cmake.org/) to configure a build system for compiling and installing the headers, libraries and Cmake configuration files. To install geant3:
+In 2019, the [vmc core package](/user_guide/vmc/vmc-library) was separated from the ROOT source into a new stand-alone [vmc](https://github.com/vmc-project/vmc) package in the GitHub [vmc-project](https://github.com/vmc-project) organization. The motivation for this step was a gain in flexibility and faster workflow for new developments of multiple engine mode. Since ROOT version 6.18 the vmc package in ROOT is deprecated and it's compilation is optional. The VMC stand-alone is supported since Geant3 3.0.
 
-1. First get the Geant3 source from the [Download page](/download/geant3). We will assume that the Geant3 package sits in a subdirectory
+Geant3 with VMC uses [CMake](https://cmake.org/) to configure a build system for compiling and installing the headers, libraries and Cmake configuration files. 
+
+To install geant3:
+
+1. First get the Geant3 source from the [Download page](/download/git-geant3). We will assume that the Geant3 package sits in a subdirectory
 ```
 /mypath/geant3
 ```
@@ -31,7 +35,9 @@ $ cmake -DCMAKE_INSTALL_PREFIX=/mypath/geant3_install /mypath/geant3
 ```
   - If ROOT environment was defined using `thisroot.{c}sh` script, there is no need to provide the path to its installation. Otherwise, they can be provided using `-DROOT_DIR` cmake option.
 
-  - Since version 2.1, the Geant3 library is built by default in `RelWithDebInfo` build mode (Optimized build with debugging symbols). This default can be changed via the standard CMake option `CMAKE_BUILD_TYPE`. The other useful values are <br>
+  - Since ROOT 6.18, building the VMC library is optional. When using ROOT built with the vmc option enabled, then Geant3 will automatically use the VMC library from ROOT, otherwise the VMC stand-alone library has to be provided using `-DVMC_DIR` cmake option.  
+
+  - The Geant3 library is built by default in `RelWithDebInfo` build mode (Optimized build with debugging symbols). This default can be changed via the standard CMake option `CMAKE_BUILD_TYPE`. The other useful values are <br>
       - `Release` : Optimized build, no debugging symbols <br>
       - `Debug` : Debugging symbols, no optimization <br>
 

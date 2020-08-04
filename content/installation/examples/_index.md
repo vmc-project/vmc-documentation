@@ -4,19 +4,19 @@ menuTitle = "Examples"
 chapter = false
 hidden = false
 showhidden = true
-weight = 3
+weight = 4
 +++
 
 
 The following instructions apply to the installation since the version 3.00. Since this 3.00, VMC examples are installed with CMake. 
 
-The VMC examples libraries require [ROOT](https://root.cern.ch/) installation, the VMC examples programs can be built against Geant3 with VMC or Geant4 VMC libraries. Only the examples with the multiple engine mode (at present only E03c) can be built with both Geant3 and Geant4 VMC libraries. The `VMC_WITH_Multi` CMake option has to be set, too, in this special case. 
+The VMC examples libraries require [ROOT](https://root.cern.ch/) installation and the [VMC core package](/user-guide/vmc/vmc-library) if using ROOT built without `vmc` enabled. The VMC examples programs can be built against Geant3 with VMC or Geant4 VMC libraries. Only the examples with the multiple engine mode (at present only E03c) can be built with both Geant3 and Geant4 VMC libraries. The `VMC_WITH_Multi` CMake option has to be set, too, in this special case. 
 
 By default, the VMC examples libraries and the VMC examples programs are built against Geant4 VMC libraries together with Geant4 VMC installation. Below we provide the instructions how to build VMC examples altogether outside Geant4 VMC. The analogous instructions can be used to build each example individually or to build a user application. 
 
 To install all examples
 
-1. First get the Geant4 VMC source from the [Download page](/download/geant4_vmc), as the examples are provided within this package. We will assume that the Geant4 VMC package sits in a subdirectory
+1. First get the Geant4 VMC source from the [Download page](/download/git-geant4_vmc), as the examples are provided within this package. We will assume that the Geant4 VMC package sits in a subdirectory
 {{< highlight bash >}}
 /mypath/geant4_vmc
 {{< /highlight >}}
@@ -83,6 +83,8 @@ $ cmake -DCMAKE_INSTALL_PREFIX=/mypath/examples_install \
    - Note that in the last case, you still have to define the path to CMake configuration files used in examples which are provided with both Geant4 VMC and Geant3 CMake installations. Only examples libraries are built and installed in this case.
 
    - If ROOT and Geant4 environment was defined using `thisroot.[c]sh` and `geant4.[c]sh` scripts, there is no need to provide the path to their installations. Otherwise, they can be provided using `-DROOT_DIR` and `-DGeant4_DIR` cmake options. 
+
+  - Since ROOT 6.18, building the VMC library is optional. When using ROOT built with the vmc option enabled, then Geant4 VMC will automatically use the VMC library from ROOT, otherwise the VMC stand-alone library has to be provided using `-DVMC_DIR` cmake option.
 
 4. After the configuration has run, CMake will have generated Unix Makefiles for building examples. To run the build, simply execute make in the build directory:
 {{< highlight bash >}}

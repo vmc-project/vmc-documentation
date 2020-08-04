@@ -15,4 +15,5 @@ To join the [root-vmc@cern.ch](mailto:root-vmc@cern.ch) mailing list, do the fol
 "Members" tab and then on the "Add me" button.
 * To remove yourself from the mailing list click on the "Remove me" button on the same above "Members" page.
 
-Mailing list archive: [VMC Digest](/drupal/content/vmc-digest)
+Mailing list archive: [VMC Digest](https://groups.cern.ch/group/root-vmc)
+
