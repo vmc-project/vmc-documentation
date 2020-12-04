@@ -11,7 +11,7 @@ The implementation of the interface is provided for two Monte Carlo transport co
 
 VMC was developed by the [ALICE Software Project](http://aliceinfo.cern.ch/Offline/) and, after the complete removal of all dependencies from the experiment specific framework, it was included in [ROOT](https://root.cern.ch/) and then gradually separated from ROOT into a stand-alone [vmc-projet](https://github.com/vmc-project).
 
-These are new documentation pages, migrated from [root.cern.ch/vmc](https://root.cern.ch/vmc). If you have suggestions about how to improve this documentation, you can let us know. See [Support](/support).
+These new documentation pages were migrated from the ROOT documentation. If you have suggestions about how to improve this documentation, you can let us know. See [Support](/support).
 
 {{% notice info %}}
 **Reference paper**\
@@ -21,4 +21,4 @@ ECONF C0303241:THJT006,2003; [e-Print: cs.SE/0306005](https://arxiv.org/abs/cs/0
 
 <i class="far fa-envelope"></i> Contact: <a href="mailto: root-vmc@cern.ch"> root-vmc@cern.ch</a>
 
-*Last update: 09/09/2020*
+*Last update: 04/12/2020*
