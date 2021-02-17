@@ -11,10 +11,10 @@ Development version (the whole repository):
 git clone http://github.com/vmc-project/geant3.git
 ```
 
-To switch to the 'pro' tagged version 3.7:
+To switch to the 'pro' tagged version 3.8:
 ```bash
 cd geant3 
-git checkout v3-7
+git checkout v3-8
 ```
 
 To switch to the 'old' tagged version 2.7.p2:<br>
