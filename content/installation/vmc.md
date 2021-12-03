@@ -7,8 +7,7 @@ weight = 1
 
 VMC requires [ROOT](https://root.cern.ch/).
 
-In 2019, the [vmc core package](/user-guide/vmc/vmc-library) was separated from the ROOT source into a new stand-alone [vmc](https://github.com/vmc-project/vmc) package in the GitHub [vmc-project](https://github.com/vmc-project) organization. The motivation for this step was a gain in flexibility and faster workflow for new developments of multiple engine mode. Since ROOT version 6.18, the vmc package in ROOT is deprecated and it's compilation is optional. The VMC stand-alone is then needed for building Geant3 and Geant4 VMC when using ROOT
-compiled with the vmc disabled (default). 
+The [vmc core package](/user-guide/vmc/vmc-library) was separated from the ROOT source into a new stand-alone [vmc](https://github.com/vmc-project/vmc) package in the GitHub [vmc-project](https://github.com/vmc-project) organization.  The motivation for this step was a gain in flexibility and faster workflow for new developments of multiple engine mode. The `vmc` package in ROOT is deprecated since ROOT version 6.18 (its compilation is optional) and it is going to be removed in the next ROOT version, 6.26. The VMC stand-alone is then needed for building Geant3 and Geant4 VMC when using ROOT compiled with the vmc disabled (default). 
 
 VMC uses [CMake](https://cmake.org/) to configure a build system for compiling and installing the headers, libraries and Cmake configuration files. To install VMC:
 
