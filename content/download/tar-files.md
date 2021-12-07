@@ -10,7 +10,7 @@ weight = 5
 
 | Package | Version | Tar file | Tested with |
 |---------|---------|----------| ------------|
-| vmc | 1.1 | [v1-1.tar.gz](https://github.com/vmc-project/vmc/archive/v1-1.tar.gz) | *ROOT 6.24/06* |
+| vmc | 1.1.p1 | [v1-1-p1.tar.gz](https://github.com/vmc-project/vmc/archive/v1-1-p1.tar.gz) | *ROOT 6.24/06* |
 | geant3 | 3.9 | [v3-9.tar.gz](https://github.com/vmc-project/geant3/archive/v3-9.tar.gz) | *ROOT 6.24/06* |
 | geant4_vmc | 5.4 | [v5-4.tar.gz](https://github.com/vmc-project/geant4_vmc/archive/v5-4.tar.gz) | *ROOT 6.24.06*,<br> *Geant4 10.7.p3 (with embedded CLHEP 2.4.4.0),* <br> *VGM 4.8,* <br> *Garfield 4.0*|
 
