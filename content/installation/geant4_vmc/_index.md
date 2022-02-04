@@ -31,7 +31,9 @@ $ cmake -DCMAKE_INSTALL_PREFIX=/mypath/geant4_vmc_install /mypath/geant4_vmc
 
   - If ROOT and Geant4 environment was defined using `thisroot.[c]sh` and `geant4.[c]sh` scripts, there is no need to provide path to their installations. Otherwise, they can be provided using `-DROOT_DIR` and `-DGeant4_DIR` cmake options.
 
- - Since Geant4 VMC 5.4, the VMC stand-alone library has to be provided using `-DVMC_DIR` cmake option. If the VMC stand-alone library is not found, the cmake will fall back to ROOT and try to build against its VMC library (availble if ROOT was built with the `vmc` option enabled) and a deprecation warning will be issued.
+ - Since Geant4 VMC 5.4, the VMC stand-alone library has to be provided using `-DVMC_DIR` cmake option. If the VMC stand-alone library is not found, the deprecated VMC library in ROOT (availble if ROOT was built with the `vmc` option enabled) can still be used, a deprecation warning will be issued in this case.
+
+ - Since Geant4 VMC 6.0, **the deprecated VMC library in ROOT cannot be used** and building against ROOT built with the `vmc` option enabled will fail with CMake error.
 
 4. After the configuration has run, CMake will have generated Unix Makefiles for building Geant4 VMC. To run the build, simply execute make in the build directory:
 ```
@@ -49,7 +51,7 @@ $ make -jN VERBOSE=1
 $ make install
 ```
 
-This will build geant4_vmc, g4root and mtroot packages.
+This will build geant4_vmc, g4root and examples packages.
 For VMC examples see [VMC examples installation page](/installation/examples).
 
 {{% children  %}}

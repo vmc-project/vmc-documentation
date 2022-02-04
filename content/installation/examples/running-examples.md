@@ -9,10 +9,9 @@ First, make sure that you have included all libraries paths in your shared libra
 
 For all MCs:
 ```text
-/your_path/root/lib
-/your_path/mtroot_install/lib[64]  
+/your_path/root_install/lib
+/your_path/vmc_install/lib
 ```
-The MTRoot package is provided in Geant4 VMC and is installed by default with Geant4 VMC library and is located in `geant4_vmc_install`. It can be however installed also stand-alone and without Geant4 libraries.
 
 For Geant3 only:
 ```text

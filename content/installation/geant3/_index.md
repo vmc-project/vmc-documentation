@@ -35,8 +35,9 @@ $ cmake -DCMAKE_INSTALL_PREFIX=/mypath/geant3_install /mypath/geant3
 ```
   - If ROOT environment was defined using `thisroot.{c}sh` script, there is no need to provide the path to its installation. Otherwise, they can be provided using `-DROOT_DIR` cmake option.
 
-  - Since Geant3 3.9, the VMC stand-alone library has to be provided using `-DVMC_DIR` cmake option.
-  If the VMC stand-alone library is not found, the cmake will fall back to ROOT and try to build against its VMC library (availble if ROOT was built with the `vmc` option enabled) and a deprecation warning will be issued.
+  - Since Geant3 3.9, the VMC stand-alone library has to be provided using `-DVMC_DIR` cmake option.  If the VMC stand-alone library is not found, the deprecated VMC library in ROOT (availble if ROOT was built with the `vmc` option enabled) can still be used, a deprecation warning will be issued in this case.
+
+  - Since Geant3 4.0, **the deprecated VMC library in ROOT cannot be used** and building against ROOT built with the `vmc` option enabled will fail with CMake error.
 
   - The Geant3 library is built by default in `RelWithDebInfo` build mode (Optimized build with debugging symbols). This default can be changed via the standard CMake option `CMAKE_BUILD_TYPE`. The other useful values are <br>
       - `Release` : Optimized build, no debugging symbols <br>

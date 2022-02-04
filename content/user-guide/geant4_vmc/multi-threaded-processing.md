@@ -54,7 +54,7 @@ MyClass(const MyClass& origin);
    {{< /highlight >}}
    In general, the objects which state is modified during event processing need to be created on workers while the objects which are used in read-only mode can be be shared. See the examples implementation as a guidance.
 
-3. Replace your Root manager with `TVirtualMCRootManager`, provided in new `mtroot` library, which implements in a thread-safe way the functions previously provided in the VMC examples in the `Ex02RootManager` class.
+3. Replace your Root manager with `TMCRootManager`, provided in the `vmc` library, which implements in a thread-safe way the functions previously provided in the VMC examples in the `Ex02RootManager` class.
 
 4. Carefully check thread-safety of your application code. Note that ROOT has to be initialized for multi-threading via calling 
    {{< highlight cpp >}}
@@ -82,12 +82,12 @@ TThread::Initialize();
 TVirtualMCApplication(origin.GetName(),origin.GetTitle()),
   {{< /highlight >}}
 
-- Check the existence of `TVirtualMCRootManager` in `YourSD::Initialize()` as when running in MT mode the `TVirtualMCRootManager` is not instantiated on master but only on workers.
+- Check the existence of `TMCRootManager` in `YourSD::Initialize()` as when running in MT mode the `TMCRootManager` is not instantiated on master but only on workers.
   {{< highlight cpp >}}
-if ( TVirtualMCRootManager::Instance() ) Register();
+if ( TMCRootManager::Instance() ) Register();
   {{< /highlight >}}
 
-- The MTRoot package provides a locking mechanism similar to
+- The `vmc` package provides a locking mechanism similar to
   `G4AutoLock`, which can be used in the user application for handling 
   the operations which are not thread-safe. (It is not demonstrated in 
   the VMC examples, as there is no such use case where locking
