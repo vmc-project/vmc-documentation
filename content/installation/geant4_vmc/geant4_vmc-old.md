@@ -109,7 +109,7 @@ in this case as it would trigger building geant4_vmc against the Geant4 configur
 <p>
 Since the version 2.0, you can choose to run Geant4 with the Geant4 native geometry navigation or the G4Root navigation.
 
-<p> To run with the Geant4 native geometry navigation in case your geometry is defined via the Root geometry package, you will have to install the Virtual Geometry Model (VGM) package. See the <a href="http://ivana.home.cern.ch/ivana/VGM.html"> VGM Web site </a> how to do it.
+<p> To run with the Geant4 native geometry navigation in case your geometry is defined via the Root geometry package, you will have to install the Virtual Geometry Model (VGM) package. See the <a href="https://vmc-project.github.io/vgm-documentation/"> VGM Web site </a> how to do it.
 
 <p>
 VGM is used in Geant4 VMC for a geometry in memory conversion from Root TGeo objects to the Geant4 native geometry. More details about this can be found at the <a href="http://root.cern.ch/drupal/content/geometry-definition-navigation"> page on geometry definition and navigation</a>.

@@ -7,7 +7,7 @@ showhidden = true
 weight = 5
 +++
 
-The user [VMC stack](https://vmc-project.github.io/vmc/html/classTVirtualMCStack.html) is used differently in Geant3 VMC and Geant4 VMC. Geant3 VMC pops both primary and secondary particles as they are provided by `TVirtualMCStack::PopNextTrack()`, while Geant4 VMC pops only primary particles using `TVirtualMCStack::PopPrimaryForTracking()` from the VMC stack. 
+The user [VMC stack](https://vmc-project.github.io/vmc/classTVirtualMCStack.html) is used differently in Geant3 VMC and Geant4 VMC. Geant3 VMC pops both primary and secondary particles as they are provided by `TVirtualMCStack::PopNextTrack()`, while Geant4 VMC pops only primary particles using `TVirtualMCStack::PopPrimaryForTracking()` from the VMC stack. 
 
 Stacking of secondary particles is then handled by Geant4 kernel and the user VMC stack only monitors this stacking. By default, Geant4 VMC saves each secondary particle when it starts its tracking (at the the pre-track phase). User can customize this default behaviour and choose also not to save secondary particles at all or to save them in the step of their parent particle, immediately after their creation.
 This can be done using the command (see in the section on  [Switching User Interfaces](/user-guide/geant4_vmc/switching-user-interfaces) how to apply Geant4 commands in a Root user session):

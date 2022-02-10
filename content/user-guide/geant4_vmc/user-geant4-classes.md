@@ -13,15 +13,15 @@ Such customization is recommended for including a user own physics list. User ha
 
 ### User Physics List
 
-The example of including user own physics list is provided in the VMC example E03 in [Ex03RunConfiguration2](http://ivana.home.cern.ch/ivana/examples_html/classEx03RunConfiguration2.html) class.
+The example of including user own physics list is provided in the VMC example E03 in [Ex03RunConfiguration2](https://vmc-project.github.io/geant4_vmc/examples_html/classEx03RunConfiguration2.html) class.
 
-In case, a user has registered his own physics list, he has a possibility to combine his own physics list with the `TG4SpecialPhysicsList` using `TG4ComposedPhysics` list as it is demonstrated in the VMC example E03, see [Ex03RunConfiguration2](http://ivana.home.cern.ch/ivana/examples_html/classEx03RunConfiguration2.html), and he can then activate any special process as described above.( Another possibility, which requires more expertise, would be to register the special process physics constructor (eg. class `TG4SpecialCutsPhysics`) in a user own modular physics list.)
+In case, a user has registered his own physics list, he has a possibility to combine his own physics list with the `TG4SpecialPhysicsList` using `TG4ComposedPhysics` list as it is demonstrated in the VMC example E03, see [Ex03RunConfiguration2](https://vmc-project.github.io/geant4_vmc/examples_html/classEx03RunConfiguration2.html), and he can then activate any special process as described above.( Another possibility, which requires more expertise, would be to register the special process physics constructor (eg. class `TG4SpecialCutsPhysics`) in a user own modular physics list.)
 
 ### User Detector Construction
 
-Including of user geometry construction is also demonstrated in the example E03 in [Ex03RunConfiguration1](http://ivana.home.cern.ch/ivana/examples_html/classEx03RunConfiguration1.html) class.
+Including of user geometry construction is also demonstrated in the example E03 in [Ex03RunConfiguration1](https://vmc-project.github.io/geant4_vmc/examples_html/classEx03RunConfiguration1.html) class.
 
 ### Regions
 
-Since version 2.5, users have a possibility to define Geant4 regions by overriding the  [TG4VUserRegionConstruction](http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4VUserRegionConstruction.html) class. Definition and including of such a user region construction class in the VMC application is demonstrated in the example E03 in [Ex03RunConfiguration3](http://ivana.home.cern.ch/ivana/examples_html/classEx03RunConfiguration3.html) class.
+Since version 2.5, users have a possibility to define Geant4 regions by overriding the  [TG4VUserRegionConstruction](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4VUserRegionConstruction.html) class. Definition and including of such a user region construction class in the VMC application is demonstrated in the example E03 in [Ex03RunConfiguration3](https://vmc-project.github.io/geant4_vmc/examples_html/classEx03RunConfiguration3.html) class.
 

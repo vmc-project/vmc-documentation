@@ -11,7 +11,7 @@ weight = 4
 
 ### Physics
 
-Geant4 VMC does not provide a default physics list. User have to choose the physics list from the physics lists provided in Geant4 (see the [Geant4 Physics List Guide](http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/PhysicsListGuide/html/index.html) or include their own physics list. The choice of the physics list is done via the option specified with creating [TG4RunConfiguration](http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4RunConfiguration.html) object. This option is passed as*the second argument* in `TG4RunConfiguration` constructor (see [examples](examples) for more details).</p>
+Geant4 VMC does not provide a default physics list. User have to choose the physics list from the physics lists provided in Geant4 (see the [Geant4 Physics List Guide](http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/PhysicsListGuide/html/index.html) or include their own physics list. The choice of the physics list is done via the option specified with creating [TG4RunConfiguration](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4RunConfiguration.html) object. This option is passed as*the second argument* in `TG4RunConfiguration` constructor (see [examples](examples) for more details).</p>
 
 This option can be defined as: 
 ```bash
@@ -36,7 +36,7 @@ The `<g4-physics-list>_<EM-option>` must represent a valid Geant4 physics list (
 
 ### Special processes
 
-In order to activate the support of VMC features like the VMC cuts, VMC process controls, user has to activate the special processes defined in [TG4SpecialPhysicsList](http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4SpecialPhysicsList.html). The selection of special processes is passed as the *third argument* in `TG4RunConfiguration` constructor (see [examples](http://ivana.home.cern.ch/ivana/examples_html/index.html) for more details):
+In order to activate the support of VMC features like the VMC cuts, VMC process controls, user has to activate the special processes defined in [TG4SpecialPhysicsList](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4SpecialPhysicsList.html). The selection of special processes is passed as the *third argument* in `TG4RunConfiguration` constructor (see [examples](https://vmc-project.github.io/geant4_vmc/examples_html/index.html) for more details):
 ```bash
 "[stepLimiter][+specialCuts][+specialControls][+stackPopper]" 
 ```
@@ -55,7 +55,7 @@ Examples:
 
 ### Composed physics list
 
-According to the user selection, Geant4 VMC creates a [TG4ComposedPhysicsList](http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4ComposedPhysicsList.html) object which is a composition of a selected Geant4 physics list (or a user physics list), the extra physics list ( [TG4ExtraPhysicsList](http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4ExtraPhysicsList.html) - in development version only) and the [TG4SpecialPhysicsList](http://ivana.home.cern.ch/ivana/g4vmc_htm/classTG4SpecialPhysicsList.html) object. The inclusion of the extra physics list is optional. The composed physics list processes the Geant4 (or user) physics list in the first order, then adds the extra physics processes (if selected) and finally the special processes, registered in TG4SpecialPhysicsList, are added in the last order.
+According to the user selection, Geant4 VMC creates a [TG4ComposedPhysicsList](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4ComposedPhysicsList.html) object which is a composition of a selected Geant4 physics list (or a user physics list), the extra physics list ( [TG4ExtraPhysicsList](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4ExtraPhysicsList.html) - in development version only) and the [TG4SpecialPhysicsList](https://vmc-project.github.io/geant4_vmc/g4vmc_htm/classTG4SpecialPhysicsList.html) object. The inclusion of the extra physics list is optional. The composed physics list processes the Geant4 (or user) physics list in the first order, then adds the extra physics processes (if selected) and finally the special processes, registered in TG4SpecialPhysicsList, are added in the last order.
 
 Since version 2.13, the user physics selection is added to the TGeant4 object title so that it can be retrievable in a user application.
 

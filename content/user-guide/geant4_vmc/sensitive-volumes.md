@@ -9,7 +9,7 @@ weight = 3
 
 ## Sensitive Detectors
 
-Recently (since ROOT version v6.13.04) a new interface to user sensitive detector, [TVirtualMCSensitiveDetector](https://vmc-project.github.io/vmc/html/classTVirtualMCSensitiveDetector.html), has been added in the set of VMC interfaces. The support for this new way of definig sensitive detector is available since geant3 2.6 and geant4_vmc 4.0.
+Recently (since ROOT version v6.13.04) a new interface to user sensitive detector, [TVirtualMCSensitiveDetector](https://vmc-project.github.io/vmc/classTVirtualMCSensitiveDetector.html), has been added in the set of VMC interfaces. The support for this new way of definig sensitive detector is available since geant3 2.6 and geant4_vmc 4.0.
 
 The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function:
 {{< highlight cpp >}}

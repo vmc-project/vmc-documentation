@@ -7,7 +7,7 @@ weight = 6
 +++
 
 {{% notice warning %}}
-Only the **Geant3.21** code itself and the implementation of the [TVirtualMC](https://vmc-project.github.io/vmc/html/classTVirtualMC.html) interface, **TGeant3**, provided in [geant3](https://github.com/vmc-project/geant3) are maintained by the VMC project.
+Only the **Geant3.21** code itself and the implementation of the [TVirtualMC](https://vmc-project.github.io/vmc/classTVirtualMC.html) interface, **TGeant3**, provided in [geant3](https://github.com/vmc-project/geant3) are maintained by the VMC project.
 {{% /notice %}}
 
 ### Geant3.21
@@ -21,11 +21,9 @@ See also [Geant3.21 User Guide](/geant.pdf)
 
 ### TGeant3 (Geant3 VMC)
 
-The directory `TGeant3` contains the classes TGeant3 and TGeant3TGeo,
-which implement the  TVirtualMC interface, see more about VMC at: <br/>
-[https://root.cern.ch/vmc](https://root.cern.ch/vmc)
+The directory `TGeant3` contains the classes [TGeant3](https://github.com/vmc-project/geant3/blob/master/TGeant3/TGeant3.h) and [TGeant3TGeo](https://github.com/vmc-project/geant3/blob/master/TGeant3/TGeant3TGeo.h),
+which implement the [TVirtualMC](https://vmc-project.github.io/vmc/classTVirtualMC.html) interface.
 
 ### Examples
 
 The directory `examples` includes a set of FORTRAN examples. These examples are not maintained and tested in the VMC project test suites. Instead, the geant3 package is tested using the test suites defined in [geant4_vmc/examples](/examples).
-

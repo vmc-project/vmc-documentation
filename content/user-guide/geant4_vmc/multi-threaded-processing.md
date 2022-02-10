@@ -9,7 +9,7 @@ weight = 12
 
 ### Geant4 VMC with Multi-threading Geant4
 
-Since version 3.00, Geant4 VMC supports running Geant4 in multi-threading (MT) mode. The VMC application will run automatically in MT mode when Geant4 VMC is built against Geant4 MT. This default behaviour can be changed via the option specified with creating [TG4RunConfiguration](http://ivana.home.cern.ch/ivana/g4vmc_html/classTG4RunConfiguration.html) passed as the fifth argument in TG4RunConfiguration constructor. *(Note that the fourth argument, specialStacking option, cannot be omitted in this case.)*
+Since version 3.00, Geant4 VMC supports running Geant4 in multi-threading (MT) mode. The VMC application will run automatically in MT mode when Geant4 VMC is built against Geant4 MT. This default behaviour can be changed via the option specified with creating [TG4RunConfiguration](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4RunConfiguration.html) passed as the fifth argument in TG4RunConfiguration constructor. *(Note that the fourth argument, specialStacking option, cannot be omitted in this case.)*
 
 The VMC application which has not been migrated to MT should be run in a sequential mode, either with Geant4 VMC built against Geant4 sequential libraries or with Geant4 VMC built against Geant4 MT libraries with disabled multi-threading mode in `TG4RunConfiguration`. Otherwise its run will stop with an exception.
 

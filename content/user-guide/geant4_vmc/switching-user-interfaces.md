@@ -45,7 +45,7 @@ Idle> /mcControl/rootCmd TBrowser b;
 
 ### Geant4 VMC commands
 
-Geant4 VMC implements several Geant4 UI commands associated with the objects defined in Geant4 VMC. To make their Geant4 VMC origin apparent, all these commands start with the prefix <i>mc</i>.  Several Geant4 and Geant VMC commands are used in the `g4config.in` and `g4vis.in`  macros in the [VMC examples](http://ivana.home.cern.ch/ivana/examples_html/index.html).
+Geant4 VMC implements several Geant4 UI commands associated with the objects defined in Geant4 VMC. To make their Geant4 VMC origin apparent, all these commands start with the prefix <i>mc</i>.  Several Geant4 and Geant VMC commands are used in the `g4config.in` and `g4vis.in`  macros in the [VMC examples](https://vmc-project.github.io/geant4_vmc/examples_html/index.html).
 
 You can get an interactive help for all available commands by typing:
 ```bash
