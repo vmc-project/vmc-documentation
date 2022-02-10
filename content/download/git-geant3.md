@@ -11,13 +11,13 @@ Development version (the whole repository):
 git clone http://github.com/vmc-project/geant3.git
 ```
 
-To switch to the 'pro' tagged version 3.9:
+To switch to the 'pro' tagged version 4.0:
 ```bash
 cd geant3 
-git checkout v3-9
+git checkout v4-0
 ```
 
-To switch to the 'old' tagged version 2.7.p2:<br>
+To switch to the 'old' tagged version 2.7.p2 (compatible with ROOT 5.x):<br>
 ```bash 
 cd geant3 
 git checkout v2-7-p2
