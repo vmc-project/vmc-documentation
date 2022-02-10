@@ -12,7 +12,8 @@ git clone http://github.com/vmc-project/geant4_vmc.git
 ```
 
 To switch to the 'pro' tagged version 6.0 (compatible with Geant4 11.0.x):
-```bash cd geant4_vmc 
+```bash
+cd geant4_vmc 
 git checkout v6-0
 ```
 
