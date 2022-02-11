@@ -1,16 +1,15 @@
 +++
-title = "Virtual Monte Carlo"
+title = "VMC Core"
 menuTitle = "VMC"
 chapter = true
-weight = 3
-#pre = "<b>3.1 </b>"
+weight = 2
 +++
 
-### Chapter 3.1
+### Chapter 3.2
 
-# Virtual Monte Carlo
+# VMC Core
 
-This chapter presents the VMC concept, the core VMC library and the new multiple engine functionality.
+This chapter presents the core VMC package and the new multiple engine functionality.
 
 {{% children style="div" depth="999" %}}
 

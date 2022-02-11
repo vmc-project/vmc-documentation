@@ -31,7 +31,7 @@ $ cmake -DCMAKE_INSTALL_PREFIX=/mypath/vmc_install /mypath/vmc
 ```
   - If ROOT environment was defined using `thisroot.{c}sh` script, there is no need to provide the path to its installation. Otherwise, they can be provided using `-DROOT_DIR` cmake option.
 
-  - The VMC library is built by default in `RelWithDebInfo` build mode (Optimized build with debugging symbols). This default can be changed via the standard CMake option `CMAKE_BUILD_TYPE`. The other useful values are <br>
+  - The VMC core is built by default in `RelWithDebInfo` build mode (Optimized build with debugging symbols). This default can be changed via the standard CMake option `CMAKE_BUILD_TYPE`. The other useful values are <br>
       - `Release` : Optimized build, no debugging symbols <br>
       - `Debug` : Debugging symbols, no optimization <br>
 

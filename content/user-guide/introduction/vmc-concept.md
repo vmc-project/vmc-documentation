@@ -1,9 +1,8 @@
 +++
 title = "VMC Concept"
-menuTitle = "Concept"
+menuTitle = "VMC Concept"
 chapter = false
 weight = 1
-#pre = "<b>3.1 </b>"
 +++
 
 The Virtual Monte Carlo (VMC) allows to run different simulation Monte Carlo without changing the user code and therefore the input and output format as well as the geometry and detector response definition.
@@ -22,14 +21,6 @@ The other interfaces are implemented in the user application. The user VMC appli
 The VMC is fully integrated with the Root geometry package, [TGeo](https://root.cern/doc/master/group__Geometry__classes.html), and users can easily define their VMC application with TGeo geometry and this way of geometry definition is recommended for new users.
 
 It is also possible to define geometry via Geant3-like functions defined in the VMC interface, however this way is kept only for backward compatibility and should not be used by new VMC users.
-
-## Available VMCs
-
-### For GEANT3 - geant3
-[Geant3 VMC](../../geant3+vmc) (C++) is provided within a single package together with GEANT3 (Fortran) - geant3 .
-
-### For Geant4 - geant4_vmc
-[Geant4 VMC](../../geant4_vmc) is provided within a package geant4_vmc , that, in difference from geant3, naturally does not include Geant4 itself and you will need the Geant4 installation to run your VMC application with Geant4 VMC.
 
 ## Multiple VMCs
 
