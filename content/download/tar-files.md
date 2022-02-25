@@ -22,5 +22,5 @@ In general, the VMC packages can be built with the Root version which they were 
 | Package | Version | Tar file | Tested with |
 |---------|---------|----------| ------------|
 | geant3 | 3.9.p1 | [v3-9-p1.tar.gz](https://github.com/vmc-project/geant3/archive/v3-9-p1.tar.gz) | *vmc 1.1.p1, ROOT 6.24/06*  |
-| geant4_vmc | 5.4.p1 | [geant4_vmc-5-4-p1.tar.gz](https://github.com/vmc-project/geant4_vmc/archive/v5-4-p1.tar.gz) | *vmc 1.1.p1, ROOT 6.24.06*,<br> *Geant4 10.7.p3 (with embedded CLHEP 2.4.4.0),* <br> *VGM 4.9,* <br> *Garfield 4.0*|
+| geant4_vmc | 5.4.p2 | [geant4_vmc-5-4-p2.tar.gz](https://github.com/vmc-project/geant4_vmc/archive/v5-4-p2.tar.gz) | *vmc 1.1.p1, ROOT 6.24.06*,<br> *Geant4 10.7.p3 (with embedded CLHEP 2.4.4.0),* <br> *VGM 4.9,* <br> *Garfield 4.0*|
 | geant3 | 2.7.p2 | [v2-7-p2.tar.gz](https://github.com/vmc-project/geant3/archive/v2-7-p2.tar.gz) | *ROOT 5.34/36*  |
