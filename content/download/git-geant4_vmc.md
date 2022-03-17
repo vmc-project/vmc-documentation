@@ -11,10 +11,10 @@ Development version (the whole repository):
 git clone http://github.com/vmc-project/geant4_vmc.git
 ```
 
-To switch to the **'pro'** tagged version **6.0** (compatible with *vmc 2.x, Geant4 11.0.x*):
+To switch to the **'pro'** tagged version **6.1** (compatible with *vmc 2.x, Geant4 11.0.x*):
 ```bash
 cd geant4_vmc 
-git checkout v6-0
+git checkout v6-1
 ```
 
 To switch to the **'old'** tagged version **5.4** (compatible with *vmc 1.x, Geant4 10.7.x*):
