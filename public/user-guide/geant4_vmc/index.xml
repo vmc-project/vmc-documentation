@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geant4 VMC on VMC</title>
+    <link>/user-guide/geant4_vmc/</link>
+    <description>Recent content in Geant4 VMC on VMC</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/user-guide/geant4_vmc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Geometry Definition &amp; Navigation</title>
+      <link>/user-guide/geant4_vmc/geometry-definition-navigation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/geometry-definition-navigation/</guid>
+      <description>Geometry definition The VMC supports two ways of geometry definition:
+via Root geometry package (TGeo) via TVirtualMC interface (historically the first way) The first (newer) way is recommended for new users, the way via VMC is kept for a backward compatibility.
+Since the version 2.0, user can choose between Geant4 native navigation and G4Root navigation, if geometry is define via TGeo. The choice of the navigation is done via the option specified with creating TG4RunConfiguration object (see VMC examples for more details):</description>
+    </item>
+    
+    <item>
+      <title>Magnetic Field</title>
+      <link>/user-guide/geant4_vmc/magnetic-field/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/magnetic-field/</guid>
+      <description>The user magnetic field is in VMC defined via TVirtualMagField interface and then set to VMC using TVirtualMC::SetMagField(TVirtualMagField*) function. The propagation of tracks inside the magnetic field in Geant4 can be performed to a user-defined accuracy. See more details in the Electromagnetic Field section in the Geant4 User Guide for Application Developers. Note that while Geant4 allows magnetic, electric and electromagnetic fields, the VMC is currently limited to magnetic fields only.</description>
+    </item>
+    
+    <item>
+      <title>Sensitive Detectors and Volumes</title>
+      <link>/user-guide/geant4_vmc/sensitive-volumes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/sensitive-volumes/</guid>
+      <description>Sensitive Detectors Recently (since ROOT version v6.13.04) a new interface to user sensitive detector, TVirtualMCSensitiveDetector, has been added in the set of VMC interfaces. The support for this new way of definig sensitive detector is available since geant3 2.6 and geant4_vmc 4.0.
+The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function: void TVirtualMCApplication::SetSensitiveDetectors()
+using the new TVirtualMC function: void TVirtualMC::SetSensitiveDetector( const TString&amp;amp; volumeName, TVirtualMCSensitiveDetector* userSD); Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and MCApplication::Stepping() using the function void VirtualMC::SetExclusiveSDScoring(Bool_t); If exclusive scoring is selected, the MCApplication::Stepping() is not called by MC.</description>
+    </item>
+    
+    <item>
+      <title>Physics Lists</title>
+      <link>/user-guide/geant4_vmc/physics-lists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/physics-lists/</guid>
+      <description>Physics list selection Physics Geant4 VMC does not provide a default physics list. User have to choose the physics list from the physics lists provided in Geant4 (see the Geant4 Physics List Guide or include their own physics list. The choice of the physics list is done via the option specified with creating TG4RunConfiguration object. This option is passed asthe second argument in TG4RunConfiguration constructor (see examples for more details).</description>
+    </item>
+    
+    <item>
+      <title>Stacking of Particles</title>
+      <link>/user-guide/geant4_vmc/stacking-of-particles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/stacking-of-particles/</guid>
+      <description>The user VMC stack is used differently in Geant3 VMC and Geant4 VMC. Geant3 VMC pops both primary and secondary particles as they are provided by TVirtualMCStack::PopNextTrack(), while Geant4 VMC pops only primary particles using TVirtualMCStack::PopPrimaryForTracking() from the VMC stack.
+Stacking of secondary particles is then handled by Geant4 kernel and the user VMC stack only monitors this stacking. By default, Geant4 VMC saves each secondary particle when it starts its tracking (at the the pre-track phase).</description>
+    </item>
+    
+    <item>
+      <title>Special Cuts and Regions</title>
+      <link>/user-guide/geant4_vmc/special-cuts-and-regions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/special-cuts-and-regions/</guid>
+      <description>The way of applying cuts is different in Geant3 and Geant4. In Geant3, the cuts are defined as a limit in energy, which is applied both as an energy threshold (a secondary particle is not produced if its energy is beyond the threshold) and a tracking cut (a particle is stopped when its energy gets below the cut).
+Inn Geant4, there is defined a unique cut in range which is then converted to an energy threshold per particle and material.</description>
+    </item>
+    
+    <item>
+      <title>User Geant4 Classes</title>
+      <link>/user-guide/geant4_vmc/user-geant4-classes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/user-geant4-classes/</guid>
+      <description>The default Geant4 VMC behaviour, defined by the Geant4 user mandatory classes and user action classes implemented in Geant4 VMC, can be customized by a user by providing his own class derived from TG4RunConfiguration.
+Such customization is recommended for including a user own physics list. User has also the possibility to override detector construction and/or primary generation action classes and use an existing Geant4 geometry/primary generator definition with VMC. In other cases, though the customisation is possible and allowed by the design, it has not been tested and so it is not recommended especially for the novice users.</description>
+    </item>
+    
+    <item>
+      <title>Visualization</title>
+      <link>/user-guide/geant4_vmc/visualization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/visualization/</guid>
+      <description>Geant4 visualization and UI drivers can be in Geant4 VMC enabled via dedicated CMake configuration options. See more details in Installing Geant4 VMC.
+The G3-like functions for visualization defined in TVirtualMC are overcome with the interactive visualization capabilities of both Root and Geant4 geometry modellers, that&amp;rsquo;s why user is encouraged to use these modeller directly. User can set Geant4 visualization options using Geant4 visualization commands, as it is illustrated in the VMC examples in g4vis.</description>
+    </item>
+    
+    <item>
+      <title>Switching User Interfaces</title>
+      <link>/user-guide/geant4_vmc/switching-user-interfaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/switching-user-interfaces/</guid>
+      <description>The VMC interface provides a common denominator for all implemented MC&amp;rsquo;s and cannot cover all commands available in a Geant4 user session through Geant4 user interface (UI). Switching between the Root UI and the Geant4 UI gives a user the possibility of working with the native Geant4 UI. It is also possible to process a foreign command or a foreign macro in both UIs:
+From Root to Geant4 UI Switching UI: root [0] ((TGeant4*)gMC)-&amp;gt;StartGeantUI();</description>
+    </item>
+    
+    <item>
+      <title>Multi-threaded Processing</title>
+      <link>/user-guide/geant4_vmc/multi-threaded-processing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/multi-threaded-processing/</guid>
+      <description>Geant4 VMC with Multi-threading Geant4 Since version 3.00, Geant4 VMC supports running Geant4 in multi-threading (MT) mode. The VMC application will run automatically in MT mode when Geant4 VMC is built against Geant4 MT. This default behaviour can be changed via the option specified with creating TG4RunConfiguration passed as the fifth argument in TG4RunConfiguration constructor. (Note that the fourth argument, specialStacking option, cannot be omitted in this case.)
+The VMC application which has not been migrated to MT should be run in a sequential mode, either with Geant4 VMC built against Geant4 sequential libraries or with Geant4 VMC built against Geant4 MT libraries with disabled multi-threading mode in TG4RunConfiguration.</description>
+    </item>
+    
+    <item>
+      <title>Verbosity</title>
+      <link>/user-guide/geant4_vmc/verbosity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/verbosity/</guid>
+      <description>For many Geant4 VMC classes (like for Geant4 classes) the user can select a higher verbosity level and activate various printings which can help in understanding or debugging his application.
+/mcVerbose/all level Set the same verbose level (level &amp;gt;= 0) to all Geant4 VMC objects. If level = 0 no printing is issued, the higher the level is more printings will be issued. /mcVerbose/geometryManager 2 Activate the debug printing from VGM geometry conversion (when geomRootToGeant4 option is selected) /mcVerbose/regionsManager 1 [2] [3] level=1: print the number of regions added via VMC level=2: print also the list of all volumes, the cuts in energy and calculated cuts in range level=3: print also all evaluated energy values /mcVerbose/composedPhysicsList 2 [3] [4] Set the same verbose level to the registed user physics lists.</description>
+    </item>
+    
+    <item>
+      <title>Verbosity for Developers</title>
+      <link>/user-guide/geant4_vmc/vebosity-for-developers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/vebosity-for-developers/</guid>
+      <description>For many Geant4 VMC classes (like for Geant4 classes) the user can select a higher verbosity level and activate various printings which can help in understanding or debugging his application. Here we list the commands useful rather for Geant4 VMC developers, for the commands useful for users see Verbosity.
+/mcVerbose/SDConstruction 2 Print the volumes IDs (implemented via G4VSensitiveDetector objects) and the maps between volumes and volume IDs. /mcVerbose/runManager 3 Print the logical volume store.</description>
+    </item>
+    
+    <item>
+      <title>Source code documentation</title>
+      <link>/user-guide/geant4_vmc/source-code-documentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant4_vmc/source-code-documentation/</guid>
+      <description>Source code documentation has been generated from the source code by Doxygen.</description>
+    </item>
+    
+  </channel>
+</rss>

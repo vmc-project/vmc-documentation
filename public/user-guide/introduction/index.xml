@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on VMC</title>
+    <link>/user-guide/introduction/</link>
+    <description>Recent content in Introduction on VMC</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/user-guide/introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VMC Concept</title>
+      <link>/user-guide/introduction/vmc-concept/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/introduction/vmc-concept/</guid>
+      <description>The Virtual Monte Carlo (VMC) allows to run different simulation Monte Carlo without changing the user code and therefore the input and output format as well as the geometry and detector response definition.
+The core of the VMC is the category of classes vmc. It provides a set of interfaces which completely decouple the dependencies between the user code and the concrete Monte Carlo, two of which have the key role:</description>
+    </item>
+    
+    <item>
+      <title>VMC Project</title>
+      <link>/user-guide/introduction/vmc-project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/introduction/vmc-project/</guid>
+      <description>The vmc-project GitGub organization provides the following packages:
+vmc -&amp;gt; The core of the VMC provides the interfaces and classes independent from the Monte Carlo transport code.
+See more in the VMC Core section.
+geant3 -&amp;gt; The updated version of Geant3.21 that includes several bug fixes compared to the standard version in CERNLIB. The directory TGeant3 contains the classes which implement the TVirtualMC interface for Geant3
+See more in the Geant3 section.</description>
+    </item>
+    
+  </channel>
+</rss>

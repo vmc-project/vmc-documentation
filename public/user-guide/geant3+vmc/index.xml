@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geant3 &#43; VMC on VMC</title>
+    <link>/user-guide/geant3&#43;vmc/</link>
+    <description>Recent content in Geant3 &#43; VMC on VMC</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/user-guide/geant3+vmc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Geant3 &#43; VMC Content</title>
+      <link>/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/user-guide/geant3&#43;vmc/geant3&#43;vmc-content/</guid>
+      <description>Only the Geant3.21 code itself and the implementation of the TVirtualMC interface, TGeant3, provided in geant3 are maintained by the VMC project.
+Geant3.21 The updated version of Geant3.21 that includes several bug fixes compared to the standard version in CERNLIB. In this version all Geant3 gxxxxx routines have been renamed g3xxxxx.
+The old Makefile system was replaced with a CMake based system since version 2.0.
+See also Geant3.21 User Guide</description>
+    </item>
+    
+  </channel>
+</rss>
