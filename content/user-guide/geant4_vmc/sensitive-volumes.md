@@ -41,13 +41,13 @@ The selection of sensitive volumes can be done in two ways:
 
 1. Via the following Geant4 VMC command:
    ```
-/mcDet/addSDSelection volName1 [volName2 ...]
+   /mcDet/addSDSelection volName1 [volName2 ...]
    ```
    The command can be applied more times, the new selection is each time added to the existing ones.
 
 2. Via labeling volumes directly in TGeo geometry. In this case, user has to notify Geant4 VMC about using the sensitive volumes selection from TGeo by applying Geant4 VMC command: 
    ```
-/mcDet/setSDSelectionFromTGeo true
+   /mcDet/setSDSelectionFromTGeo true
    ```
    The volumes in TGeo geometry are set sensitive by setting the option "SV" to TGeoVolume objects: 
    {{< highlight cpp >}}
@@ -56,7 +56,6 @@ myVolume->SetOption("SV");
    {{< /highlight >}}
    User can also choose a different string than "SV" for sensitive volumes labeling. In this case, they have to notify Geant4 VMC about the label via the Geant4 VMC command: 
    ```
-/mcDet/setSVLabel MyLabel
+   /mcDet/setSVLabel MyLabel
    ```
    Note that the option set via `TGeoVolume::SetOption` function is not persistent.
-
