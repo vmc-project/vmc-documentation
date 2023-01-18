@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on VMC</title>
-    <link>/publications/</link>
+    <link>https://ihrivnac.github.io/publications/</link>
     <description>Recent content in Publications on VMC</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/publications/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://ihrivnac.github.io/publications/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Publications List</title>
-      <link>/publications/publications-list/</link>
+      <link>https://ihrivnac.github.io/publications/publications-list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/publications/publications-list/</guid>
+      <guid>https://ihrivnac.github.io/publications/publications-list/</guid>
       <description>Please refer to the paper below when publishing results base on simulations with VMC:
 Reference paper
 Hřivnáčová I et al: The Virtual MonteCarlo,
@@ -26,10 +26,10 @@ B Volkel et al 2020 EPJ Web Conf. Volume 245 02008</description>
     
     <item>
       <title>Meetings (Old)</title>
-      <link>/publications/meetings/</link>
+      <link>https://ihrivnac.github.io/publications/meetings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/publications/meetings/</guid>
+      <guid>https://ihrivnac.github.io/publications/meetings/</guid>
       <description> </description>
     </item>
     

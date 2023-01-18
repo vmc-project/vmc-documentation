@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Installing and Running Examples on VMC</title>
-    <link>/installation/examples/</link>
+    <link>https://ihrivnac.github.io/installation/examples/</link>
     <description>Recent content in Installing and Running Examples on VMC</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/installation/examples/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://ihrivnac.github.io/installation/examples/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Build Options</title>
-      <link>/installation/examples/build-options/</link>
+      <link>https://ihrivnac.github.io/installation/examples/build-options/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/installation/examples/build-options/</guid>
+      <guid>https://ihrivnac.github.io/installation/examples/build-options/</guid>
       <description>Overview of the available options for building VMC examples and their default values:
 VMC_WITH_Geant4 Build with Geant4 OFF VMC_WITH_Geant3 Build with Geant3 OFF VMC_WITH_Multi Build with multiple engines OFF VMC_INSTALL_EXAMPLES Install examples libraries and programs ON Geant4 VMC build options are automatically exported in Geant4VMCConfig.cmake. If Geant4 VMC was built with VGM, the VGM installation path has to be provided via -DVGM_DIR option.</description>
     </item>
     
     <item>
       <title>Building examples application programs - With 3.00.b01</title>
-      <link>/installation/examples/examples-old/</link>
+      <link>https://ihrivnac.github.io/installation/examples/examples-old/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/installation/examples/examples-old/</guid>
+      <guid>https://ihrivnac.github.io/installation/examples/examples-old/</guid>
       <description> </description>
     </item>
     
     <item>
       <title>Running examples</title>
-      <link>/installation/examples/running-examples/</link>
+      <link>https://ihrivnac.github.io/installation/examples/running-examples/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/installation/examples/running-examples/</guid>
+      <guid>https://ihrivnac.github.io/installation/examples/running-examples/</guid>
       <description>First, make sure that you have included all libraries paths in your shared library path.
 For all MCs:
 /your_path/root_install/lib /your_path/vmc_install/lib For Geant3 only:

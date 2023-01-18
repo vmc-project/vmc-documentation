@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Examples on VMC</title>
-    <link>/examples/</link>
+    <link>https://ihrivnac.github.io/examples/</link>
     <description>Recent content in Examples on VMC</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/examples/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://ihrivnac.github.io/examples/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VMC Examples</title>
-      <link>/examples/vmc-examples/</link>
+      <link>https://ihrivnac.github.io/examples/vmc-examples/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/examples/vmc-examples/</guid>
+      <guid>https://ihrivnac.github.io/examples/vmc-examples/</guid>
       <description>A set of examples of usage of VMC is included in geant4_vmc.
 Though provided within Geant4 VMC, they can be built independently and do not require Geant4 installation in case you want to run them with GEANT3 only.
 See more details on the VMC Examples web page.</description>
@@ -19,10 +19,10 @@ See more details on the VMC Examples web page.</description>
     
     <item>
       <title>Experiment Frameworks</title>
-      <link>/examples/experiment-frameworks/</link>
+      <link>https://ihrivnac.github.io/examples/experiment-frameworks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/examples/experiment-frameworks/</guid>
+      <guid>https://ihrivnac.github.io/examples/experiment-frameworks/</guid>
       <description>VMC was developed by the ALICE Software Project and, since then it was adopted by other experiment frameworks.
 ALICE AliRoot - the ALICE software framework (for LHC Run 1 and 2) O2 - the new ALICE software framework in development (for LHC Run 3 and 4) FAIR FairRoot - A simulation, reconstruction and analysis framework, based on the ROOT system, for FAIR experiments </description>
     </item>

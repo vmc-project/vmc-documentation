@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Installing Geant4 VMC on VMC</title>
-    <link>/installation/geant4_vmc/</link>
+    <link>https://ihrivnac.github.io/installation/geant4_vmc/</link>
     <description>Recent content in Installing Geant4 VMC on VMC</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/installation/geant4_vmc/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://ihrivnac.github.io/installation/geant4_vmc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Build Options</title>
-      <link>/installation/geant4_vmc/build-options/</link>
+      <link>https://ihrivnac.github.io/installation/geant4_vmc/build-options/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/installation/geant4_vmc/build-options/</guid>
+      <guid>https://ihrivnac.github.io/installation/geant4_vmc/build-options/</guid>
       <description>Geant4 VMC includes the G4Root package and examples, which are independent from Geant4 VMC and can be build and used stand-alone. Use of G4Root, VGM, Geant4 G3toG4, UI and VIS packages in Geant4 VMC library is optional and can be switched on/off during CMake build.
 Overview of available options and their default values:
 Geant4VMC_BUILD_G4Root Build G4Root ON Geant4VMC_BUILD_MTRoot Build MTRoot ON Geant4VMC_BUILD_Geant4VMC Build Geant4VMC ON Geant4VMC_BUILD_EXAMPLES Build VMC examples ON Geant4VMC_USE_G4Root Build with G4Root ON Geant4VMC_USE_VGM Build with VGM OFF Geant4VMC_USE_GEANT4_UI Build with Geant4 UI drivers ON Geant4VMC_USE_GEANT4_VIS Build with Geant4 Vis drivers ON Geant4VMC_USE_GEANT4_G3TOG4 Build with Geant4 G3toG4 library OFF Geant4VMC_INSTALL_EXAMPLES Install examples ON </description>
@@ -19,30 +19,30 @@ Geant4VMC_BUILD_G4Root Build G4Root ON Geant4VMC_BUILD_MTRoot Build MTRoot ON Ge
     
     <item>
       <title>Installing Geant4 VMC - Older Versions</title>
-      <link>/installation/geant4_vmc/geant4_vmc-old/</link>
+      <link>https://ihrivnac.github.io/installation/geant4_vmc/geant4_vmc-old/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/installation/geant4_vmc/geant4_vmc-old/</guid>
+      <guid>https://ihrivnac.github.io/installation/geant4_vmc/geant4_vmc-old/</guid>
       <description> &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;OpenGL visualization &amp;lt;/b&amp;gt; &amp;lt;br&amp;gt; It is recommended to build Geant4 X11 OpenGL visualization driver used in the VMC examples. It is handled in Geant4 CMake build via the following CMake option:
 -DGEANT4_USE_OPENGL_X11=ON &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;h3&amp;gt; Geant4 VMC &amp;lt;/h3&amp;gt; </description>
     </item>
     
     <item>
       <title>Installing Geant4 VMC - Special Installations</title>
-      <link>/installation/geant4_vmc/special-installations/</link>
+      <link>https://ihrivnac.github.io/installation/geant4_vmc/special-installations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/installation/geant4_vmc/special-installations/</guid>
+      <guid>https://ihrivnac.github.io/installation/geant4_vmc/special-installations/</guid>
       <description> &amp;lt;li&amp;gt; &amp;lt;h3&amp;gt;Geant4 configuration (version &amp;gt;= 9.5) &amp;lt;br&amp;gt; with manual installation (with GNUmake) &amp;lt;/h3&amp;gt; If you install Geant4 with the GNUmakefile build system and your own environment setting, you need to have set the following environment variables. This way of installation requires an experience in Geant4 and so it is not recommended for novice users.
 G4LIB_BUILD_SHARED set to 1 (required) G4LIB_USE_G3TOG4 set to 1 (required) G4VIS_BUILD_OPENGLX_DRIVER set to 1 (recommended) G4VIS_USE_OPENGLX set to 1 (recommended) If Geant4 is installed in a different path than the path to the source tree, the following additional variables have to be set: G4LIB &amp;hellip; path to Geant4 libraries (optional) G4INCLUDE &amp;hellip; path to Geant4 include files (option) </description>
     </item>
     
     <item>
       <title>Required and Optional Packages</title>
-      <link>/installation/geant4_vmc/required-optional-packages/</link>
+      <link>https://ihrivnac.github.io/installation/geant4_vmc/required-optional-packages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/installation/geant4_vmc/required-optional-packages/</guid>
+      <guid>https://ihrivnac.github.io/installation/geant4_vmc/required-optional-packages/</guid>
       <description>Geant4 VMC requires ROOT and Geant4 installed, then the VMC core package if using ROOT built without vmc enabled, and optionally, it can be built with VGM. See below tips for configuration and installation of these packages.
 The path to required and optional packages installations can be defined in the standard CMake way, via the paths to the CMake configuration file:
 Geant4_DIR ... path to Geant4Config.cmake ROOT_DIR ... path to ROOTConfig.</description>
