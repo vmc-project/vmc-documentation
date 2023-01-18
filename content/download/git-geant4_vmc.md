@@ -17,10 +17,10 @@ cd geant4_vmc
 git checkout v6-2
 ```
 
-To switch to the **'old'** tagged version **6.1.p2** (compatible with *vmc 2.x, Geant4 11.0.x*):
+To switch to the **'old'** tagged version **6.1.p3** (compatible with *vmc 2.x, Geant4 11.0.x*):
 ```bash 
 cd geant4_vmc 
-git checkout v6-1-p2
+git checkout v6-1-p3
 ```
 
 The list of new developments, bug fixes and the required versions of ROOT and Geant4 for each version can be found in the [history](https://github.com/vmc-project/geant4_vmc/blob/master/history) file.
