@@ -40,7 +40,7 @@ To print the user limits (including the VMC cuts and controls) set for the speci
 
 ### Geant4 cuts
 
-*By default, Geant4 VMC ignores the VMC cuts* and applies only the global cut in range defined in the physics list. The default global cut value in Geant4 VMC is 1\*mm for all particles which cut is applied for (gamma, e-, e+). User can change this default value for each particle separately or set a new value for all using the commands:
+**By default, Geant4 VMC ignores the VMC cuts** and applies only the global cut in range defined in the physics list. The default global cut value in Geant4 VMC is 1\*mm for all particles which cut is applied for (gamma, e-, e+). User can change this default value for each particle separately or set a new value for all using the commands:
 ```bash
 /mcPhysics/rangeCutForGamma    value    
 /mcPhysics/rangeCutForElectron value
@@ -50,9 +50,10 @@ To print the user limits (including the VMC cuts and controls) set for the speci
 
 ### Applying VMC cuts in Geant4
 
-In order to take the VMC cuts into account, the user has to activate the special cuts process by switching it on in his `g4Config.C` (see the section on [Physics list selection](/user-guide/geant4_vmc/physics_lists). This special cuts process applies the VMC cuts as tracking cuts using `G4UserLimits`.
+In order to take the VMC cuts into account, the user has to **activate the special cuts process** by switching it on in his `g4Config.C` (see the section on [Physics list selection](/user-guide/geant4_vmc/physics_lists). This special cuts process applies the VMC cuts as tracking cuts using `G4UserLimits`.
 
-When the special cuts process is activated, Geant4 VMC defines also regions according to the VMC cuts defined by the user. The regions apply the VMC cuts as an energy threshold. In order to do this, the cut energy has to be converted in range. This conversion is performed in [TG4RegionsManager](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4RegionsManager.html) using the Geant4 converter classes `G4RToEConvForElectron` and `G4RToEConvForGamma` by iterating within a given range interval up to a given precision. User can change the default precision (2 orders of magnitude) with the command:
+When the special cuts process is activated, Geant4 VMC defines also regions according to the VMC cuts defined by the user. The regions apply the VMC cuts as an energy threshold. In order to do this, the cut energy has to be converted in range. This conversion is performed in [TG4RegionsManager](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4RegionsManager.html) using the Geant4 converter classes `G4RToEConvForElectron` and `G4RToEConvForGamma` by iterating within a given range interval up to a given precision. User can change the default precision (=
+the number of iterations), which is set to 5 (was 2 up the version 6.2) with the command:
 ```bash
 /mcRegions/setRangePrecision value
 ```
@@ -61,8 +62,8 @@ The conversion of VMC cuts to the regions follows these rules:
 
 - If the VMC energy cut defined by user results in a range cut smaller than the default range cut value defined in user physics list, the VMC cut is ignored and the default range cut is used.
 
-- The range cut is first evaluated within the range 1e-03mm to 1m; when the range cut order is found, it is refined up to given precision (2 orders of magnitude by default) within 10 values of each order and the range value with the closest energy still smaller than VMC cut is chosen.<br>
-It may happen that a value cannot be refined up to given precision, then the best found value is returned.
+- The range cut is first evaluated within the range 1e-03mm to 1m; when the range cut order is found, it is refined up to given precision (5 orders of magnitude by default) within 10 values of each order and the range value with the closest energy still smaller than the VMC cut is chosen.<br>
+It may happen that a value cannot be refined up to the given precision, then the best found value is returned.
 
 - The regions are defined only in case when the VMC cuts result in range cuts different from the range cuts in the default region; then the region includes all logical volumes with a given material.
 
@@ -76,6 +77,19 @@ User can select several levels of verbosity to control the process of regions de
           2  the list of all volumes, the cuts in energy and
              calculated cuts in range
           3  all evaluated energy values
+```
+
+Since Geant4 VMC version 6.3, users can save the computed regions data in a file and then load the regions data from this files. The default filename, `regions.dat` can be also changes with a command:
+```
+/mcRegions/save [true|false]
+/mcRegions/load [true|false]
+/mcRegions/setFileName fileName
+```
+
+The match between the cuts computed from ranges and the input VMC cuts can be also checked with the `check` command. When this check is activated all cut values that differ with more than a given tolerance will be printed in the output. The default value of this tolerance (1%) can be also tuned:
+```
+/mcRegions/check [true|false]
+/mcRegions/setEnergyTolerance value
 ```
 
 It is also possible to dump the regions properties for a specified volume or to activate printing properties of all regions:
