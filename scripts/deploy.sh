@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# This scripts works when the vmc_documentation/public directory is
+# using github sub-module pointing at
+# https://github.com/vmc-project/vmc-project.github.io
+
 # If a command fails then the deploy stops
 set -e
 
