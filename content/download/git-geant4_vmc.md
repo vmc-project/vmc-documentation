@@ -11,16 +11,16 @@ Development version (the whole repository):
 git clone http://github.com/vmc-project/geant4_vmc.git
 ```
 
-To switch to the **'pro'** tagged version **6.3** (compatible with *vmc 2.x, Geant4 11.1.x*):
+To switch to the **'pro'** tagged version **6.3.p1** (compatible with *vmc 2.x, Geant4 11.1.x*):
 ```bash
 cd geant4_vmc 
-git checkout v6-3
+git checkout v6-3-p1
 ```
 
-To switch to the **'old'** tagged version **6.1.p4** (compatible with *vmc 2.x, Geant4 11.0.x*):
+To switch to the **'old'** tagged version **6.1.p5** (compatible with *vmc 2.x, Geant4 11.0.x*):
 ```bash 
 cd geant4_vmc 
-git checkout v6-1-p4
+git checkout v6-1-p5
 ```
 
 The list of new developments, bug fixes and the required versions of ROOT and Geant4 for each version can be found in the [history](https://github.com/vmc-project/geant4_vmc/blob/master/history) file.
