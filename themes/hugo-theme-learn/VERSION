@@ -1,0 +1,10 @@
+$ git log
+
+commit 3202533a746f91c67de1a8fa373c0328ec1b403d (HEAD -> master, origin/master, origin/HEAD)
+Merge: f8d138c b09bf2b
+Author: Mathieu Cornic <mathieu.cornic@gmail.com>
+Date:   Thu Jan 4 15:12:28 2024 +0100
+
+    Merge pull request #529 from lil5/patch-1
+    
+    Add GA Analytics notice in docs english
