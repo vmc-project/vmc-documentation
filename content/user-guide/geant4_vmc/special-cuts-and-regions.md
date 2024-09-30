@@ -50,7 +50,7 @@ To print the user limits (including the VMC cuts and controls) set for the speci
 
 ### Applying VMC cuts in Geant4
 
-In order to take the VMC cuts into account, the user has to **activate the special cuts process** by switching it on in his `g4Config.C` (see the section on [Physics list selection](/user-guide/geant4_vmc/physics_lists). This special cuts process applies the VMC cuts as tracking cuts using `G4UserLimits`.
+In order to take the VMC cuts into account, the user has to **activate the special cuts process** by switching it on in his `g4Config.C` (see the section on [Physics list selection](/user-guide/geant4_vmc/physics-lists). This special cuts process applies the VMC cuts as tracking cuts using `G4UserLimits`.
 
 Since Geant4 VMC version 6.5, based on Geant4 version 11.2, when the special cuts process is activated, the VMC cuts are also directly set as production cuts to `G4ProductionCutsTable.`
 
