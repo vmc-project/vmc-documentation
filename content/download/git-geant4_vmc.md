@@ -2,7 +2,7 @@
 title = "Geant4 VMC"
 menuTitle = ""
 chapter = false
-weight = 4
+weight = 3
 #pre = "<b>1. </b>"
 +++
 
@@ -11,16 +11,16 @@ Development version (the whole repository):
 git clone http://github.com/vmc-project/geant4_vmc.git
 ```
 
-To switch to the **'pro'** tagged version **6.6.p3** (compatible with *vmc 2.x, Geant4 11.2*):
+To switch to the **'pro'** tagged version **6.7** (compatible with *vmc 2.1, Geant4 11.3*):
 ```bash
 cd geant4_vmc 
-git checkout v6-6-p3
+git checkout v6-7
 ```
 
-To switch to the **'old'** tagged version **6.4.p1** (compatible with *vmc 2.x, Geant4 11.1.x*):
+To switch to the **'old'** tagged version **6.6.p3** (compatible with *vmc 2.x, Geant4 11.2.x*):
 ```bash 
 cd geant4_vmc 
-git checkout v6-4-p1
+git checkout v6-6-p3
 ```
 
 The list of new developments, bug fixes and the required versions of ROOT and Geant4 for each version can be found in the [history](https://github.com/vmc-project/geant4_vmc/blob/master/history) file.

@@ -2,7 +2,7 @@
 title = "Installing Geant4 VMC"
 menuTitle = "Geant4 VMC"
 chapter = false
-weight = 3
+weight = 2
 +++
 
 Geant4 VMC requires the [VMC core package](/user-guide/vmc/vmc-library), [ROOT](https://root.cern.ch/) and [Geant4](http://geant4.web.cern.ch/) installed, and optionally, it can be built with [VGM](https://github.com/vmc-project/vgm). See below tips for configuration and installation of these packages.

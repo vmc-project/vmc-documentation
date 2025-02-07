@@ -4,7 +4,7 @@ menuTitle = "Geant3"
 chapter = false
 hidden = false
 showhidden = true
-weight = 2
+weight = 3
 +++
 
 Geant3 with VMC requires the [VMC core package](/user-guide/vmc/vmc-library) and [ROOT](https://root.cern.ch/).

@@ -25,7 +25,15 @@ Since Geant4 VMC version 3.5, it is possible to propagate the zero magnetic fiel
 
 ### Customization of Field Parameters
 
-In Geant4 VMC, user can customize the default integration method and the default accuracy parameters with a set of dedicated commands. It is a user responsibility to choose the type of equation of motion and the integration method compatible with the user field. (The defined commands are not limited to magnetic field only in order to make easier an eventual future extension of VMC to electric and electromagnetic fields.)
+Since Geant4 11.3, the UI commands to customize the default integration method and the default accuracy parameters with a set of dedicated commands were integrated in Geant4 and removed from Geant4 VMC.
+
+Please, refer to the [Creating a Field for a Detector](https://geant4-userdoc.web.cern.ch/UsersGuides/ForApplicationDeveloper/html/Detector/electroMagneticField.html#creating-a-field-for-a-detector) section in Geant4 Applicator Developer Guide.
+
+The commands described below are available in the `/field/` command directory.
+
+### Customization of Field Parameters (OLD)
+
+In Geant4 VMC **versions before 6.7**, user can customize the default integration method and the default accuracy parameters with a set of dedicated commands. It is a user responsibility to choose the type of equation of motion and the integration method compatible with the user field. (The defined commands are not limited to magnetic field only in order to make easier an eventual future extension of VMC to electric and electromagnetic fields.)
 
 The available commands:
 

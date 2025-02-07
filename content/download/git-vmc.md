@@ -11,10 +11,10 @@ Development version (the whole repository):
 git clone http://github.com/vmc-project/vmc.git
 ```
 
-To switch to 'pro' tagged version 2.0:
+To switch to 'pro' tagged version 2.1:
 ```bash
 cd vmc
-git checkout v2-0
+git checkout v2-1
 ```
 
 To switch to the 'old' tagged version 1.1.p1:
