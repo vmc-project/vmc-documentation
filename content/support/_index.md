@@ -5,8 +5,4 @@ chapter = true
 weight = 7
 +++
 
-### Chapter 7
-
-# Support
-
-{{% children style="div" depth="999" %}}
+{{% children type="flat" depth="999" %}}

@@ -6,10 +6,6 @@ weight = 4
 #pre = "<b>4. </b>"
 +++
 
-### Chapter 5
-
-# Reference Documentation
-
 This chapter provides the links to the VMC packages reference documentation
 
 - [VMC core](https://vmc-project.github.io/vmc/)

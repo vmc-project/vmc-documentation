@@ -1,0 +1,28 @@
+Local tests:
+
+[Ivanas-MacBook-Pro-4] ~/work/projects/g4tutorial/geant4-fe/web/themes/hugo-theme-relearn > git branch -a
+* (HEAD detached at 9.0.0)
+
+======
+git log
+
+commit 7da6911983a962ebc92ab0aafb4368b94a4bc3f2 (HEAD, tag: 9.0.0)
+Author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+Date:   Mon Dec 29 21:43:14 2025 +0000
+
+    Release 9.0.0
+
+
+========
+
+Git deployment
+
+Gitlab hugo version:
+hugo v0.140.2+extended linux/amd64 BuildDate=unknown
+
+Relearn theme:
+8.2.0
+
+-----
+
+

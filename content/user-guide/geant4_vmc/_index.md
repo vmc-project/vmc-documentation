@@ -5,10 +5,6 @@ chapter = true
 weight = 3
 +++
 
-### Chapter 3.3
-
-# Geant4 VMC
-
 Geant4 VMC represents the realisation of the [Virtual Monte Carlo](/user-guide/vmc) (VMC) for  [Geant4](http://geant4.web.cern.ch/geant4). It can be also seen as a Geant4 application implemented via the VMC interfaces. It implements all Geant4 user mandatory classes and user action classes, which provide the default Geant4 VMC behaviour, that can be then customized by a user in many ways.
 
-{{% children style="div" depth="999" %}}
+{{% children type="flat" depth="999" %}}

@@ -4,7 +4,7 @@ languageCode = "en-us"
 title = "VMC"
 
 # Change the default theme to be use when building the site with Hugo
-theme = [ "vmc-theme", "hugo-theme-learn" ]
+theme = [ "vmc-theme", "hugo-theme-relearn" ]
 
 # For search functionality
 [outputs]
@@ -16,6 +16,17 @@ home = [ "HTML", "RSS", "JSON"]
   #themeVariant = "blue"
   #themeVariant = "green"
   themeVariant = "vmc"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = true
 
 # This tells Hugo where to create our HTML files from the content in our 
 # publishDir = "ihrivnac.github.io" 

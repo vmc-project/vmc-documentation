@@ -5,10 +5,6 @@ chapter = true
 weight = 5
 +++
 
-### Chapter 3.5
-
-# G4Root
-
 The G4Root package is an interface allowing running a GEANT4 simulation with a ROOT geometry. In fact it is just the G4 navigation that uses directly the TGeo geometry. 
 Though it is distributed in **geant4_vmc**, it can be built and used independently from VMC.
 
