@@ -14,7 +14,7 @@ weight = 4
 Geant4 VMC does not provide a default physics list. User have to choose the physics list from the physics lists provided in Geant4 (see the [Geant4 Physics List Guide](http://geant4-userdoc.web.cern.ch/geant4-userdoc/UsersGuides/PhysicsListGuide/html/index.html) or include their own physics list. The choice of the physics list is done via the option specified with creating [TG4RunConfiguration](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4RunConfiguration.html) object. This option is passed as*the second argument* in `TG4RunConfiguration` constructor (see [examples](examples) for more details).</p>
 
 This option can be defined as: 
-```bash
+```
 "<g4-physics-list>[_<EM-option>][+extra][+optical][+radDecay]" 
 ```
 where
@@ -27,7 +27,7 @@ where
 - `+radDecay` - adds G4RadioactiveDecayPhysics 
 
 Examples:
-```bash
+```
 "FTFP_BERT_EMV+optical" 
 "QGSP_BIC_EMY+radDecay" 
 ```
@@ -37,7 +37,7 @@ The `<g4-physics-list>_<EM-option>` must represent a valid Geant4 physics list (
 ### Special processes
 
 In order to activate the support of VMC features like the VMC cuts, VMC process controls, user has to activate the special processes defined in [TG4SpecialPhysicsList](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4SpecialPhysicsList.html). The selection of special processes is passed as the *third argument* in `TG4RunConfiguration` constructor (see [examples](https://vmc-project.github.io/geant4_vmc/examples_html/index.html) for more details):
-```bash
+```
 "[stepLimiter][+specialCuts][+specialControls][+stackPopper]" 
 ```
 where
@@ -48,7 +48,7 @@ where
 - `"stackPopper"` - stack popper physics
 
 Examples:
-```bash
+```
 "stepLimit+specialCuts" 
 "stepLimit+specialCuts+stackPopper" 
 ```
@@ -64,14 +64,14 @@ Since version 2.13, the user physics selection is added to the TGeant4 object ti
 The instantiated particles and physics processes can be the viewed with the following Geant4 and Geant4 VMC commands.
 
 To list all particles and processes: 
-```bash
+```
 /particle/list 
 /process/list 
 /mcPhysics/dumpAllProcess 
 ```
 
 To inspect a selected particle: 
-```bash
+```
 /particle/select particleName 
 /particle/process/dump 
 /particle/property/dump 
@@ -79,7 +79,7 @@ To inspect a selected particle:
 ```
 
 To print the mapping of G4 processes to VMC process codes and VMC (G3-like) process controls: 
-```bash
+```
 /mcPhysics/printProcessMCMap 
 /mcPhysics/printProcessControlMap 
 ```
@@ -87,7 +87,7 @@ To print the mapping of G4 processes to VMC process codes and VMC (G3-like) proc
 ## Electromagnetic physics
 
 Users can tailor the extra physics processes provided by Geant4 via the commands defined in the `/physics_lists/em/` command directory and switch on the muon or gamma nuclear interaction, synchrotron radiation,  gamma or positron conversion to muon pair or positron conversion to hadrons processes, which are not which are not included by default:
-```bash
+```
 /physics_lists/em/SyncRadiation true|false
 /physics_lists/em/SyncRadiationAll true|false
 /physics_lists/em/GammaNuclear true|false 
@@ -98,14 +98,14 @@ Users can tailor the extra physics processes provided by Geant4 via the commands
 ```
 
 Users can also customize the parameters of the electromagnetic physics processes using the commands in the following directories (use interactive help to get more information): 
-```bash
+```
 /process/eLoss/ 
 /process/msc/ 
 /process/em/ 
 ```
 
 Since Geant4 VMC version 2.10, it is also possible to choose an extra model of energy loss, fluctuations or multiple scattering for selected tracking media and selected particles. This can be done via the following built-in commands: 
-```bash
+```
 /mcPhysics/emModel/setEmModel PAI 
 /mcPhysics/emModel/setRegions trackingMedium1 [trackingMedium2 ...] 
 /mcPhysics/emModel/setParticles all 
@@ -118,14 +118,14 @@ At present, the following models are supported: PAI and PAIPhoton models which a
 ### Hadronic physics
 
 User can activate a generation of the cross sections plots for a given projectile particle and a target element via the following commands:
-```bash
+```
 /mcCrossSection/makeHistograms [true|false] 
 /mcCrossSection/setParticle proton 
 /mcCrossSection/setElement Al
 ```
 
 The default energy or momentum limits and the number of bins can be customised via the commands: 
-```bash
+```
 /mcCrossSection/setMinKinE 1 MeV 
 /mcCrossSection/setMaxKinE 1 TeV 
 /mcCrossSection/setMinMomentum 10 MeV 
@@ -135,7 +135,7 @@ The default energy or momentum limits and the number of bins can be customised v
 ```
 
 It is also possible to print the cross section value for a selected energy or a momentum for a selected cross section type (or all types) via the following commands:
-```bash
+```
 /mcCrossSection/setParticle anti_proton 
 /mcCrossSection/setElement H 
 /mcCrossSection/setMomentum 0.3 GeV 

@@ -33,6 +33,8 @@ To demonstrate the usage of this new interfaces the **E03 example** was split in
 - **E03a** - scoring via sensitive volumes and `MCApplication::Stepping` (old way)
 - **E03b** - scoring via sensitive detectors derived from new `TVirtualMCSensitiveDetector` interface
 
+In the development version, detector registration by source-volume name covers all its Geant4 representations. A detector shared by several source volumes does not merge their VMC IDs. The same source-name handling applies to sensitive-volume selection. See [Volume Names and IDs](/user-guide/geant4_vmc/volume-names-and-ids) for details and a scoring example.
+
 ## Sensitive Volumes
 
 The VMC interfaces did not provide functions for a user selection of sensitive volumes and (unless the new sensitive detector framework is used) the user `MCApplication::Stepping()` is called in all volumes. In order to speed up simulation, in Geant4 VMC (since version 2.13) the user has a possibility to select sensitive volumes. If any selection is provided, the user `MCApplication::Stepping()` is called only from the selected sensitive volumes.

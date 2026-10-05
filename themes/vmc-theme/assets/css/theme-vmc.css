@@ -54,17 +54,6 @@ a:hover {
     color: var(--MAIN-LINK-HOVER-color);
 }
 
-/* redefine here for overriting white-space value */
-pre code {
-    color: whitesmoke;
-    background: inherit;
-    white-space: pre;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    font-size: 15px;
-}
-
 #sidebar ul li.visited > a .read-icon {
 	color: var(--MENU-VISITED-color);
 }

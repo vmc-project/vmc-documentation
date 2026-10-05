@@ -40,15 +40,19 @@ Below we shortly comment the implementation of these options:
 
 - `geomGeant4`:
   User Geant4 detector construction class can be passed to Geant4 VMC via user defined run configuration class (see [User Geant4 Classes](/user-guide/geant4_vmc/user-geant4-classes)). If Geant4 VMC is built with VGM, geometry can be exported in Root using the built-in command:
-  ```bash
+  ```
   /vgm/generateRoot
   ```
   and reused in Geant3 or Fluka (when available) VMC simulation.
 
+### Volume names and IDs
+
+In the development version, reflected logical volumes and recognized `Gsposp` variants share the VMC ID of their source volume. See [Volume Names and IDs](/user-guide/geant4_vmc/volume-names-and-ids) for naming rules, scoring guidance and the distinction between source-volume and placement-specific queries.
+
 ### Useful commands
 
 Geant4 VMC implements various commands which allow users to get more information about their application setup:
-```bash
+```
 /mcDet/printMaterials
 /mcDet/printMaterialsProperties
 /mcDet/printMedia
@@ -57,7 +61,7 @@ Geant4 VMC implements various commands which allow users to get more information
 prints materials, material properties, tracking media, volumes
 
 In Geant4 VMC, there is by default set a step limit 10 cm for all materials with density lower than 0.001 g/cm3. This default setting can be overridden via the following commands:
-```bash
+```
 /mcDet/setLimitDensity 1.e-6 g/cm3
 /mcDet/setMaxStepInLowDensityMaterials 1 mm
 ```
@@ -67,7 +71,7 @@ How to apply Geant4 commands in a Root user session is explained at the section 
 ### Geometry in XML
 
 The VGM provides also the XML exporters which enable to generate XML files with geometry description in the AGDD or GDML formats. If Geant4 VMC is compiled with USE_VGM option, geometry can be exported to XML using the built-in commands:
-```bash
+```
 /vgm/generateAGDD [volumeName]
 /vgm/generateGDML [volumeName]
 ```

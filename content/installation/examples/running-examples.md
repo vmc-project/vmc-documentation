@@ -33,6 +33,10 @@ The example can be run by calling the provided macros from Root session:
 ```bash
 $ cd geant4_vmc/examples/E01
 $ root
+```
+
+In the ROOT session:
+```
 root[0] .x load_g4.C   # load all libraries needed to run with Geant4
 root[1] .x run_g4.C    # run with Geant4
 or
@@ -49,7 +53,7 @@ $ /mypath/examples_install_g4/bin/g4vmc_exampleE01
 ```
 
 For keeping maximum simplicity of the code, a fixed configuration is defined in the examples `main()` function. More flexible version of the `main()` function is provided in the test programs which default configuration options can be changed by running the program with selected command line options, eg.
-```bash
+```
 $ g4vmc_testE01
    [-g4g,  --g4-geometry]         Geant4 VMC geometry option
    [-g4pl, --g4-physics-list]     Geant4 physics list selection
@@ -60,7 +64,7 @@ $ g4vmc_testE01
    [-v,    --verbose]             verbose option (yes,no)
 ```
 or  
-```bash
+```
 $ g3vmc_testE01
    [-g3g,  --g3-geometry]         Geant3 geometry option    
    [-r4m,  --root-macro]          Root macro

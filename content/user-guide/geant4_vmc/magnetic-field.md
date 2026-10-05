@@ -23,6 +23,8 @@ Since Geant4 VMC version 3.5, it is possible to propagate the zero magnetic fiel
 /mcDet/setIsZeroMagField true 
 ```
 
+In the development version, a ROOT local field is created for every matching Geant4 representation of the source volume, including reflected representations. The supported geometry modes and world-coordinate field evaluation are unchanged. Field parameters are indexed by the actual Geant4 logical-volume name. See [Volume Names and IDs](/user-guide/geant4_vmc/volume-names-and-ids) for the source-name matching rules.
+
 ### Customization of Field Parameters
 
 Since Geant4 11.3, the UI commands to customize the default integration method and the default accuracy parameters with a set of dedicated commands were integrated in Geant4 and removed from Geant4 VMC.

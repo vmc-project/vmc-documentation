@@ -17,9 +17,9 @@ By default, the VMC examples libraries and the VMC examples programs are built a
 To install all examples
 
 1. First get the Geant4 VMC source from the [Download page](/download/git-geant4_vmc), as the examples are provided within this package. We will assume that the Geant4 VMC package sits in a subdirectory
-{{< highlight bash >}}
+```
 /mypath/geant4_vmc
-{{< /highlight >}}
+```
 
 2. Create build directory alongside our source directory for installation with Geant4:
 {{< highlight bash >}}

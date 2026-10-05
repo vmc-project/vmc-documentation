@@ -29,17 +29,17 @@ root [0] ((TGeant4*)gMC)->ProcessGeantCommand("/tracking/verbose 1");
 ### From Geant4 to Root UI
 
 Switching UI:
-```bash
+```
 Idle> /mcControl/root
 ```
 
 Call Root macro "myMacro.C" from Geant4:
-```bash
+```
 Idle> /mcControl/rootMacro myMacro
 ```
 
 Call Root command from Geant4:
-```bash
+```
 Idle> /mcControl/rootCmd TBrowser b;
 ```
 
@@ -48,10 +48,10 @@ Idle> /mcControl/rootCmd TBrowser b;
 Geant4 VMC implements several Geant4 UI commands associated with the objects defined in Geant4 VMC. To make their Geant4 VMC origin apparent, all these commands start with the prefix <i>mc</i>.  Several Geant4 and Geant VMC commands are used in the `g4config.in` and `g4vis.in`  macros in the [VMC examples](https://vmc-project.github.io/geant4_vmc/examples_html/index.html).
 
 You can get an interactive help for all available commands by typing:
-```bash
+```
 Idle> help
 ```
 or
-```bash
+```
 Idle> /control/help
 ```

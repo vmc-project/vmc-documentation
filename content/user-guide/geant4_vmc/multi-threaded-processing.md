@@ -32,11 +32,11 @@ The default number of threads, defined in Geant4, can be changed by setting the 
 export G4FORCENUMBEROFTHREADS=4
 ```
 or
-```bash
+```
 setenv G4FORCENUMBEROFTHREADS 4
 ```
 In applications which do not use G4Root navigation, it can be also changed via Geant4 UI command:
-```bash
+```
 /run/numberOfThreads 4 
 ``` 
 

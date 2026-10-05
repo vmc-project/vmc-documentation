@@ -22,26 +22,26 @@ gMC->Gstpar(medId, cutName, cutValue);
 The user defined VMC cuts and their interpretation in Geant4 can be viewed with the following commands: 
 
 To print the cut values for the given cut type (cutName) and control values for the given control type (controlName) for all tracking media:
-```bash
+```
 /mcDet/printCuts  cutName
 /mcDet/printControls  controlName
 ```
 
 To print global cuts and global process controls:
-```bash
+```
 /mcPhysics/printGlobalCuts
 /mcPhysics/printGlobalControls
 ```
 
 To print the user limits (including the VMC cuts and controls) set for the specified volume:
-```bash
+```
 /mcPhysics/printVolumeLimits volName
 ```
 
 ### Geant4 cuts
 
 **By default, Geant4 VMC ignores the VMC cuts** and applies only the global cut in range defined in the physics list. The default global cut value in Geant4 VMC is 1\*mm for all particles which cut is applied for (gamma, e-, e+, proton). User can change this default value for each particle separately or set a new value for all using the commands:
-```bash
+```
 /mcPhysics/rangeCutForGamma    value    
 /mcPhysics/rangeCutForElectron value
 /mcPhysics/rangeCutForPositron value
@@ -58,7 +58,7 @@ First, Geant4 VMC defines regions per materials. Each region contains all volume
 This is performed in [TG4RegionsManager2](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4RegionsManager2.html) (new in Geant4 VMC version 6.5).
 
 User can select several levels of verbosity to control the process of regions definition:
-```bash
+```
 /mcVerbose/regionsManager level
   level = 0  no output
           1  number of regions added via VMC
@@ -83,7 +83,7 @@ The old method of applying cuts via ranges can be activated in `g4Config.C` usin
 
 With older versions, the cut energy is first converted in range and then these range production cuts are set to the region. This conversion is performed in [TG4RegionsManager](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4RegionsManager.html) using the Geant4 converter classes `G4RToEConvForElectron` and `G4RToEConvForGamma` by iterating within a given range interval up to a given precision. User can change the default precision (=
 the number of iterations), which is set to 5 (was 2 up the version 6.2) with the command:
-```bash
+```
 /mcRegions/setRangePrecision value
 ```
 
@@ -99,7 +99,7 @@ It may happen that a value cannot be refined up to the given precision, then the
 - As the range cuts do not match precisely to user defined energy cuts, the specialCuts process applies the energy cuts as tracking cuts when a particle with energy cut below threshold is generated.
 
 User can select several levels of verbosity to control the process of regions definition:
-```bash
+```
 /mcVerbose/regionsManager level   
   level = 0  no output
           1  number of regions added via VMC
@@ -109,7 +109,7 @@ User can select several levels of verbosity to control the process of regions de
 ```
 
 By default, the computed range cut for e- is applied also to e+ and proton. This feature can be switched off by the UI commands:
-```bash
+```
 /mcRegions/applyForPositron false
 /mcRegions/applyForProton false
 ````
@@ -126,7 +126,7 @@ The `check` commands permorms also a check for the match between the cuts comput
 ```
 
 It is also possible to dump the regions properties for a specified volume or to activate printing properties of all regions:
-```bash
+```
 /mcRegions/dump volumeName
 /mcRegions/print true|false
 ```
