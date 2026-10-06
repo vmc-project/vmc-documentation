@@ -147,3 +147,41 @@ cd geant4_vmc/examples
 make
 </bash> 
 </ol>
+
+
+## Historical C++11 configuration
+
+The following guidance applies to Geant4 VMC 3.x and the dependency versions stated below, not to current releases.
+
+### C++11
+
+Geant4 VMC, as well as ROOT and Geant4, have moved to the C++11 standard.
+C++11 is used by default since Geant4 VMC 3.3, Geant4 10.2 and ROOT 6.
+
+When mixing other versions of Geant4 and ROOT together, the same standard must
+be used for both packages. See below how the override the default setting
+when needed.
+
+### ROOT
+To install ROOT - follow the [Root Installation Page](http://root.cern.ch/building-root)
+
+  - **C++11** <br />
+    Geant4 VMC 3.3 built against ROOT 5.x requires ROOT built with C++11 (not default for this ROOT version), set via:
+```
+-Dcxx11=ON
+```
+option, when ROOT is built using CMake, or
+```
+--enable-cxx11
+```
+option, when ROOT is built using configure script.
+
+### Geant4
+To install Geant4 - download the source from [Geant4 Download page](http://geant4.web.cern.ch/support/download) and follow the [Geant4 Installation Guide](http://geant4.web.cern.ch/geant4/UserDocumentation/UsersGuides/InstallationGuide/html/index.html) together with the tips relevant to using it with VMC described below.
+
+  - **C++11** <br />
+Geant4 VMC 3.0 - 3.2 built against Geant4 10.0.x or 10.1.x and ROOT 6x requires
+Geant4 built with C++11 (not default for these Geant4 versions), set via:
+```
+-DGEANT4_BUILD_CXXSTD=c++11
+```

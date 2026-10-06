@@ -7,9 +7,9 @@ showhidden = true
 weight = 3
 +++
 
-Geant3 with VMC requires the [VMC core package](/user-guide/vmc/vmc-library) and [ROOT](https://root.cern.ch/).
+Geant3 with VMC requires the [VMC core package](/user-guide/vmc/vmc-core) and [ROOT](https://root.cern.ch/).
 
-The [vmc core package](/user_guide/vmc/vmc-library) was separated from the ROOT source into a new stand-alone [vmc](https://github.com/vmc-project/vmc) package in the GitHub [vmc-project](https://github.com/vmc-project) organization. The motivation for this step was a gain in flexibility and faster workflow for new developments of multiple engine mode. The `vmc` package in ROOT is deprecated since ROOT version 6.18 (its compilation is optional) and it is going to be removed in the next ROOT version, 6.26. The VMC stand-alone is supported since Geant3 3.0.
+The [vmc core package](/user-guide/vmc/vmc-core) was separated from the ROOT source into a new stand-alone [vmc](https://github.com/vmc-project/vmc) package in the GitHub [vmc-project](https://github.com/vmc-project) organization. The motivation for this step was a gain in flexibility and faster workflow for new developments of multiple engine mode. The `vmc` package in ROOT is deprecated since ROOT version 6.18 (its compilation is optional) and it is going to be removed in the next ROOT version, 6.26. The VMC stand-alone is supported since Geant3 3.0.
 
 Geant3 with VMC uses [CMake](https://cmake.org/) to configure a build system for compiling and installing the headers, libraries and Cmake configuration files. 
 
@@ -62,4 +62,3 @@ $ make install
 <hr>
 
 The instructions above apply to the installation since the version 2.0. For the installation of the previous versions (1.x) see [Installing geant3 - Older Versions](geant3-old)
-

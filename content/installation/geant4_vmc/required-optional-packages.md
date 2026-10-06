@@ -5,7 +5,7 @@ chapter = false
 weight = 2
 +++
 
-Geant4 VMC requires [ROOT](https://root.cern.ch/) and [Geant4](http://geant4.web.cern.ch/) installed, then the [VMC core package](/user-guide/vmc/vmc-library) if using ROOT built without `vmc` enabled, and optionally, it can be built with [VGM](https://github.com/vmc-project/vgm). See below tips for configuration and installation of these packages.
+Geant4 VMC requires [ROOT](https://root.cern.ch/) and [Geant4](http://geant4.web.cern.ch/) installed, and the standalone [VMC core package](/user-guide/vmc/vmc-core), and optionally, it can be built with [VGM](https://github.com/vmc-project/vgm). See below tips for configuration and installation of these packages.
 
 The path to required and optional packages installations can be defined in the standard CMake way, via the paths to the CMake configuration file:
 ```
@@ -24,38 +24,21 @@ $ source bin/geant4.csh    ... Geant4 - on C shells
 $ source bin/thisroot.csh  ... Root
 ```
 
-### C++11
+### Supported versions and C++ standard
 
-Geant4 VMC, as well as ROOT and Geant4, have moved to the C++11 standard. 
-C++11 is used by default since Geant4 VMC 3.3, Geant4 10.2 and ROOT 6.
+Geant4 VMC 6.8 was tested with VMC 2.1, Geant4 11.4, ROOT 6.36/06 and VGM 5.4. These are the release's tested versions, not minimum requirements for every dependency.
 
-When mixing other versions of Geant4 and ROOT together, the same standard must 
-be used for both packages. See below how the override the default setting 
-when needed.
+Use CMake 3.16 or newer and a compiler supporting C++17. Geant4 11.4 defaults to C++17; use the same C++ standard for ROOT, Geant4, VMC and your application. See the [Geant4 build instructions](https://geant4.web.cern.ch/documentation/dev/ig_html/InstallationGuide/installguide.html) for supported newer standards and build options.
 
-### ROOT
-To install ROOT - follow the [Root Installation Page](http://root.cern.ch/building-root)
+The C++11 instructions for older releases are retained under [Older Versions](/installation/geant4_vmc/geant4_vmc-old#historical-c11-configuration).
 
-  - **C++11** <br />
-    Geant4 VMC 3.3 built against ROOT 5.x requires ROOT built with C++11 (not default for this ROOT version), set via:
-```
--Dcxx11=ON
-```
-option, when ROOT is built using CMake, or
-```
---enable-cxx11
-```
-option, when ROOT is built using configure script.
+### ROOT and standalone VMC
+
+Follow the [ROOT installation instructions](https://root.cern/install/) and then [install standalone VMC](/installation/vmc). Current Geant4 VMC requires standalone VMC and rejects a ROOT installation with the old embedded VMC enabled. Set `VMC_DIR` to the directory containing `VMCConfig.cmake` if CMake does not find it automatically.
 
 ### Geant4
-To install Geant4 - download the source from [Geant4 Download page](http://geant4.web.cern.ch/support/download) and follow the [Geant4 Installation Guide](http://geant4.web.cern.ch/geant4/UserDocumentation/UsersGuides/InstallationGuide/html/index.html) together with the tips relevant to using it with VMC described below.
 
-  - **C++11** <br />
-Geant4 VMC 3.0 - 3.2 built against Geant4 10.0.x or 10.1.x and ROOT 6x requires
-Geant4 built with C++11 (not default for these Geant4 versions), set via:
-```
--DGEANT4_BUILD_CXXSTD=c++11
-```
+Follow the [Geant4 installation guide](https://geant4.web.cern.ch/documentation/dev/ig_html/InstallationGuide/installguide.html), together with the VMC-specific options below.
 
   - **G3toG4 tool**<br />
 The G3toG4 package is used in geant4_vmc to support geometry definition via VMC with Geant4 native navigation. The build of G3toG4 package can be activated when building Geant4 with the following CMake options:  
@@ -73,7 +56,7 @@ It is recommended to build Geant4 X11 OpenGL visualization driver used in the VM
   - **Multi-threading** <br>
 Geant4 VMC can be built against Geant4 installation in multi-threading mode which is handled in Geant4 CMake build via the CMake option: 
 ```
--DG4MULTITHREADED=ON
+-DGEANT4_BUILD_MULTITHREADED=ON
 ```
 
 Dynamic loading of Geant4 libraries, as used in VMC, requires to change the Geant4 default TLS model, initial-exec, with global-dynamic via the CMake option: 

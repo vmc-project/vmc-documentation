@@ -49,13 +49,13 @@ where
 
 Examples:
 ```
-"stepLimit+specialCuts" 
-"stepLimit+specialCuts+stackPopper" 
+"stepLimiter+specialCuts"
+"stepLimiter+specialCuts+stackPopper"
 ```
 
 ### Composed physics list
 
-According to the user selection, Geant4 VMC creates a [TG4ComposedPhysicsList](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4ComposedPhysicsList.html) object which is a composition of a selected Geant4 physics list (or a user physics list), the extra physics list ( [TG4ExtraPhysicsList](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4ExtraPhysicsList.html) - in development version only) and the [TG4SpecialPhysicsList](https://vmc-project.github.io/geant4_vmc/g4vmc_htm/classTG4SpecialPhysicsList.html) object. The inclusion of the extra physics list is optional. The composed physics list processes the Geant4 (or user) physics list in the first order, then adds the extra physics processes (if selected) and finally the special processes, registered in TG4SpecialPhysicsList, are added in the last order.
+According to the user selection, Geant4 VMC creates a [TG4ComposedPhysicsList](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4ComposedPhysicsList.html) object which is a composition of a selected Geant4 physics list (or a user physics list), the extra physics list ( [TG4ExtraPhysicsList](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4ExtraPhysicsList.html)) and the [TG4SpecialPhysicsList](https://vmc-project.github.io/geant4_vmc/g4vmc_html/classTG4SpecialPhysicsList.html) object. The inclusion of the extra physics list is optional. The composed physics list processes the Geant4 (or user) physics list in the first order, then adds the extra physics processes (if selected) and finally the special processes, registered in TG4SpecialPhysicsList, are added in the last order.
 
 Since version 2.13, the user physics selection is added to the TGeant4 object title so that it can be retrievable in a user application.
 
@@ -80,8 +80,7 @@ To inspect a selected particle:
 
 To print the mapping of G4 processes to VMC process codes and VMC (G3-like) process controls: 
 ```
-/mcPhysics/printProcessMCMap 
-/mcPhysics/printProcessControlMap 
+/mcPhysics/printProcessMap
 ```
 
 ## Electromagnetic physics
@@ -112,6 +111,17 @@ Since Geant4 VMC version 2.10, it is also possible to choose an extra model of e
 ```
 
 The `setRegions` and `setParticles` commands must be followed by the list of tracking media names and particle names respectively, separated with a blank space. The `setParticles` command can also take as a parameter the keyword `"all"`. The model will be then applied to all particles.
+
+Since Geant4 VMC 6.7, particles can be excluded when `all` is selected. Set the exclusions before run initialization, for example:
+
+```
+/mcPhysics/emModel/setEmModel PAI
+/mcPhysics/emModel/setRegions TRD_Gas-mix
+/mcPhysics/emModel/setParticles all
+/mcPhysics/emModel/setExcludedParticles GenericIon alpha
+```
+
+Replace `TRD_Gas-mix` with the tracking-medium name in your geometry.
 
 At present, the following models are supported: PAI and PAIPhoton models which are applied to ionisation process, and SpecialUrbanMsc, a special model tuned for ALICE EMCAL detector, which is applied to e- and e+ multiple scattering processes.
 

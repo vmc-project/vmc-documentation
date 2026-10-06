@@ -67,7 +67,7 @@ TThread::Initialize();
 ### Implementation details & tips
 
 - Dynamic loading of libraries requires to build Geant4 libraries 
-  with `-ftls-model=global-init` compilation flag (which is different
+  with `-ftls-model=global-dynamic` compilation flag (which is different
   from the Geant4 default, `-ftls-model=initial-exec`) and the tests 
   show that it brings a performance penalty.
 

@@ -22,6 +22,7 @@ Since the version 2.0, user can choose between Geant4 native navigation and G4Ro
 - `geomVMCtoRoot`     - geometry defined via VMC, Root navigation
 - `geomRoot`          - geometry defined via Root, Root navigation
 - `geomRootToGeant4`  - geometry defined via Root, G4 native navigation
+- `geomVMC+RootToGeant4` - geometry defined through VMC and/or TGeo, converted via VGM, G4 native navigation
 - `geomGeant4`        - geometry defined via Geant4, G4 native navigation
 
 Below we shortly comment the implementation of these options:
@@ -38,6 +39,9 @@ Below we shortly comment the implementation of these options:
 - `geomRootToGeant4`:
   The geometry defined via TGeo is converted in Geant4 geometry using the external [Virtual Geometry Model](https://vmc-project.github.io/vgm-documentation/) (VGM), which has replaced the old one-way converters from Geant4 VMC (G4toXML, RootToG4), removed from Geant4 VMC with the version 1.7. In the VGM, these convertors has been generalized and improved.
 
+- `geomVMC+RootToGeant4`:
+  VMC geometry calls build a TGeo geometry through `TGeoMCGeometry`, which can be combined with direct TGeo definitions. VGM converts the resulting geometry for Geant4 native navigation. Build Geant4 VMC with VGM enabled to use this route.
+
 - `geomGeant4`:
   User Geant4 detector construction class can be passed to Geant4 VMC via user defined run configuration class (see [User Geant4 Classes](/user-guide/geant4_vmc/user-geant4-classes)). If Geant4 VMC is built with VGM, geometry can be exported in Root using the built-in command:
   ```
@@ -48,6 +52,10 @@ Below we shortly comment the implementation of these options:
 ### Volume names and IDs
 
 In the development version, reflected logical volumes and recognized `Gsposp` variants share the VMC ID of their source volume. See [Volume Names and IDs](/user-guide/geant4_vmc/volume-names-and-ids) for naming rules, scoring guidance and the distinction between source-volume and placement-specific queries.
+
+### Assembly levels in ancestor queries
+
+In the development version after 6.8, `CurrentVolOffName()` and `CurrentVolOffID()` account for TGeo assembly levels collapsed during conversion to Geant4. Offsets therefore include these assembly levels. The assembly name and copy number are recovered from placement information. A collapsed assembly has no Geant4 logical volume of its own: at such a level, `CurrentVolOffID()` returns the placed volume's ID, not a distinct assembly ID. Use the recovered name and copy number to identify that assembly level.
 
 ### Useful commands
 

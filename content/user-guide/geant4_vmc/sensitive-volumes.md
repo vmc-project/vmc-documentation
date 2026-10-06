@@ -12,19 +12,18 @@ weight = 3
 Recently (since ROOT version v6.13.04) a new interface to user sensitive detector, [TVirtualMCSensitiveDetector](https://vmc-project.github.io/vmc/classTVirtualMCSensitiveDetector.html), has been added in the set of VMC interfaces. The support for this new way of definig sensitive detector is available since geant3 2.6 and geant4_vmc 4.0.
 
 The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function:
-{{< highlight cpp >}}
-void TVirtualMCApplication::SetSensitiveDetectors()
-{{< /highlight >}}
-
+```cpp
+void TVirtualMCApplication::ConstructSensitiveDetectors()
+```
 using the new TVirtualMC function:
-{{< highlight cpp >}}
+```cpp
 void TVirtualMC::SetSensitiveDetector(
 	const TString& volumeName,
 	TVirtualMCSensitiveDetector* userSD);
-{{< /highlight >}}
+```
 Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and `MCApplication::Stepping()` using the function
 {{< highlight cpp >}}
-void VirtualMC::SetExclusiveSDScoring(Bool_t);
+void TVirtualMC::SetExclusiveSDScoring(Bool_t);
 {{< /highlight >}}
 If exclusive scoring is selected, the `MCApplication::Stepping()` is not called by MC.
 

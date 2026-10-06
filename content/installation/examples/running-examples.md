@@ -60,14 +60,14 @@ $ g4vmc_testE01
    [-g4sp, --g4-special-physics]  Geant4 special physics selection
    [-g4m,  --g4-macro]            Geant4 macro
    [-g4vm, --g4-vis-macro]        Geant4 visualization macro
-   [-r4m,  --root-macro]          Root macro
+   [-rm,   --root-macro]          Root macro
    [-v,    --verbose]             verbose option (yes,no)
 ```
 or  
 ```
 $ g3vmc_testE01
    [-g3g,  --g3-geometry]         Geant3 geometry option    
-   [-r4m,  --root-macro]          Root macro
+   [-rm,   --root-macro]          Root macro
    [-v,    --verbose]             verbose option (yes,no)
 ```
 

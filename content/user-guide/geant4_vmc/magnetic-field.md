@@ -104,7 +104,7 @@ The commands for modifying the parameters for killing looping particles
 
 ```
 /mcRun/setLooperThresholdWarningEnergy value unit
-/mcRun/setLooperThresholImportantEnergy value unit
+/mcRun/setLooperThresholdImportantEnergy value unit
 /mcRun/setNumberOfLooperThresholdTrials value
 ```
 
@@ -113,4 +113,3 @@ These commands must be called before the run initialization, so that Geant4 VMC 
 ----
 
 How to apply Geant4 commands in a Root user session is explained at the section on [Switching User Interfaces](/user-guide/geant4_vmc/switching-user-interfaces).
-

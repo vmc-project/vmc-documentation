@@ -29,14 +29,19 @@ in a `mesh_name.txt` file at the end of simulation run.
 
 ## User defined scoring function
 
-Users can also provide their scoreweight function that takes (pdg, ekin) as arguments,
-defined via `TG4ScoreWeightCalculator` , using a new `TG4RunConfiguration` class`
-setter:
+Since Geant4 VMC 6.8, users can provide a score-weight calculator. This interface requires Geant4 11.4. The callback type is:
 
-{{< highlight cpp >}}
-void  TG4RunConfiguration::SetScoreWeightCalculator(TG4ScoreWeightCalculator swc)
-{{< /highlight >}}
+```cpp
+using TG4ScoreWeightCalculator =
+  std::function<Double_t(Int_t pdg, Double_t ekin)>;
+```
 
-The user function is then wrapped to `G4ScoreWeightCalculator` function,
-that takes (const G4Step*) as argument, and is applied to all Geant4 scorers with activated
-score weighting.
+It returns a `Double_t` weight for the particle PDG code and kinetic energy. The kinetic energy is passed directly from Geant4 in its internal energy units (MeV), without conversion to VMC's GeV convention. For an energy expressed in GeV, divide by `CLHEP::GeV` using Geant4's `G4SystemOfUnits.hh`.
+
+Register the callback in `g4Config.C` through:
+
+```cpp
+void TG4RunConfiguration::SetScoreWeightCalculator(TG4ScoreWeightCalculator swc);
+```
+
+Also activate Geant4 scoring with `SetUseOfG4Scoring()` and enable score weighting for the desired scorers. The callback is wrapped as a Geant4 function taking `const G4Step*` and applied to scorers with weighting enabled.

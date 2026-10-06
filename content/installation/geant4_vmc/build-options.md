@@ -10,7 +10,7 @@ Geant4 VMC includes the G4Root package and examples, which are independent from 
 Overview of available options and their default values:
 ```
 Geant4VMC_BUILD_G4Root       Build G4Root        ON
-Geant4VMC_BUILD_MTRoot       Build MTRoot        ON
+Geant4VMC_BUILD_G4Root_TEST  Build G4Root test   OFF
 Geant4VMC_BUILD_Geant4VMC    Build Geant4VMC     ON
 Geant4VMC_BUILD_EXAMPLES     Build VMC examples  ON
 
