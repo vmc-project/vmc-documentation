@@ -52,7 +52,7 @@ The general workflow of a multi-run is explained using some of the classes/imple
 **Implementation**
 
 1. Implement your application and stack as you have done before. Request the [TMCManager](https://vmc-project.github.io/vmc/classTMCManager.html) in your constructor by calling `TVirtualMCApplication::RequestMCManager()`
-{{< highlight cpp >}}
+```cpp
 Ex03MCApplication::Ex03MCApplication(const char* name, const char* title, Bool_t isMulti, Bool_t splitSimulation)
 {
         // some construction
@@ -64,9 +64,9 @@ Ex03MCApplication::Ex03MCApplication(const char* name, const char* title, Bool_t
         }
         // further construction
 }
-{{< /highlight >}}
+```
 1. At an appropriate stage (i.e. in `UserStack::PushTrack(...)`) you would call `TMCManager::ForwardTrack(...)` to forward the pointer to your newly constructed `TParticle` object.
-{{< highlight cpp >}}
+```cpp
 void Ex03MCStack::PushTrack(Int_t toBeDone, Int_t parent, ..., Int_t& ntr, ...)
 {
         // TParticle construction yielding pointer "particle"
@@ -79,9 +79,9 @@ void Ex03MCStack::PushTrack(Int_t toBeDone, Int_t parent, ..., Int_t& ntr, ...)
         }
         // further implementations
 }
-{{< /highlight >}}
+```
 1. Whenever needed, check the presence of [`TMCManager`](https://vmc-project.github.io/vmc/classTMCManager.html) to decide whether the code should work for single or multi-run, e.g. in the constructor of `Ex03DetectorConstruction` where its member `fMC` is setup to point to the currently running VMC in the multi-run scenario.
-{{< highlight cpp >}}
+```cpp
 Ex03DetecorConstruction::Ex03DetectorConstruction(...)
 {
         // some construction
@@ -91,9 +91,9 @@ Ex03DetecorConstruction::Ex03DetectorConstruction(...)
         }
         // maybe some more construction
 }
-{{< /highlight >}}
+```
 1. Transfer a track involving `TMCManager::TransferTrack(...)`. If the target VMC ID coincides with the one currently running, nothing will happen and the simulation would just continue.
-{{< highlight cpp >}}
+```cpp
 Ex03MCApplication::Stepping()
 {
         // some implementation
@@ -112,25 +112,25 @@ Ex03MCApplication::Stepping()
         }   
         // further implementations
 }
-{{< /highlight >}}
+```
 To use the same stack in both scenarios (single and multi-run), one can always check whether the manager is present by checking if `TMCManager::Instance()` returns a valid pointer value.
 
 **Usage**
 
 1. Instantiate your application (here the user stack is created during construction of the application, see above)
-{{< highlight cpp >}}
+```cpp
 auto isMulti = true;
 auto splitSimulation = true;
 auto appl = new Ex03MCapplication("multiApplication", "multiApplication", isMulti, splitSimulation);
-{{< /highlight >}}
+```
 1. Instantiate the engines you want to use (these are registered automatically to the manager). In the E03c example this is done in `TVirtualMCApplication::InitMC` but to clarify, it is written here explicitely,
-{{< highlight cpp >}}
+```cpp
 auto engine1 = new TGeant3(...);
 auto engine2 = new TGeant4(...);
 // Nothing further to be done
-{{< /highlight >}}
+```
 1. Call `TMCManager::Init(...)` (if needed with your custom initialization procedure, see above; that can of course also be wrapped into another method of your application as it is done here),
-{{< highlight cpp >}}
+```cpp
 void Ex03MCApplication::InitMC(std::initializer_list<const char*> setupMacros)
 {
       // some implementation
@@ -142,17 +142,17 @@ void Ex03MCApplication::InitMC(std::initializer_list<const char*> setupMacros)
       });
       // further implementations
 }
-{{< /highlight >}}
+```
 The lambda argument will be called for each registered VMC separately. If necessary, it can be more specific. Instead of passing a lambda function, a function pointer could be given or also an object. The only requirement is that what is passed implements a `()` operator taking a VMC pointer as an argument.
 1. Call `TMCManager::Run(...)` specifying the desired number of events to be simulated.
-{{< highlight cpp >}}
+```cpp
 void Ex03MCApplication::RunMC(Int_t nofEvents)
 {
       // some implementation
       fMCManager->Run(nofEvents);
       // further implementations
 }
-{{< /highlight >}}
+```
 
 **Important comments**
 

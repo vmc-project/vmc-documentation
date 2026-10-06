@@ -14,7 +14,7 @@ Since version 3.00, Geant4 VMC supports running Geant4 in multi-threading (MT) m
 The VMC application which has not been migrated to MT should be run in a sequential mode, either with Geant4 VMC built against Geant4 sequential libraries or with Geant4 VMC built against Geant4 MT libraries with disabled multi-threading mode in `TG4RunConfiguration`. Otherwise its run will stop with an exception.
 
 As the VMC classes work as a factory for creating Geant4 application objects (user initialization and user action classes, sensitive detector classes etc.), the main VMC objects: `TGeant4` and `MCApplication` need to be created on both master and worker threads. Creating of all objects on worker threads is triggered from the Geant4 VMC classes. Users need just to implement new functions of `TVirtualMCApplication` which are then used to clone the application and its containing objects on workers:
-{{< highlight cpp >}}
+```cpp
  // required for running in MT
  virtual TVirtualMCApplication* CloneForWorker() const;
  // optional
@@ -22,7 +22,7 @@ As the VMC classes work as a factory for creating Geant4 application objects (us
  virtual void BeginRunOnWorker();
  virtual void FinishRunOnWorker();
  virtual void Merge(TVirtualMCApplication* localMCApplication);
-{{< /highlight >}}
+```
 
 Overriding of `TVirtualMCApplication::CloneForWorker()` is required, 
 implementation of the other functions is optional.
@@ -43,23 +43,23 @@ In applications which do not use G4Root navigation, it can be also changed via G
 ### Migration of VMC application to Multi-threading
 
 1. Implement the required MCApplication function for MT:
-   {{< highlight cpp >}}
-virtual TVirtualMCApplication* CloneForWorker() const;
-   {{< /highlight >}}
+   ```cpp
+   virtual TVirtualMCApplication* CloneForWorker() const;
+   ```
    and, optionally also the other functions listed in the previous section.
 
 2. The step 1. will also require to implement the constructors for cloning MC application, primary generator, sensitive detectors and eventually other classes instantiated in your application: 
-   {{< highlight cpp >}}
-MyClass(const MyClass& origin);
-   {{< /highlight >}}
+   ```cpp
+   MyClass(const MyClass& origin);
+   ```
    In general, the objects which state is modified during event processing need to be created on workers while the objects which are used in read-only mode can be be shared. See the examples implementation as a guidance.
 
 3. Replace your Root manager with `TMCRootManager`, provided in the `vmc` library, which implements in a thread-safe way the functions previously provided in the VMC examples in the `Ex02RootManager` class.
 
 4. Carefully check thread-safety of your application code. Note that ROOT has to be initialized for multi-threading via calling 
-   {{< highlight cpp >}}
-TThread::Initialize();
-   {{< /highlight >}}
+   ```cpp
+   TThread::Initialize();
+   ```
    just at start of your Root macro or your application.
 
       In VMC examples, this call is executed either in g4libs.C macro or in the example main program.
@@ -78,34 +78,34 @@ TThread::Initialize();
 
 - Be careful to call `TVirtualMCApplication` standard constructor
   when cloning your application:
-  {{< highlight cpp >}}
-TVirtualMCApplication(origin.GetName(),origin.GetTitle()),
-  {{< /highlight >}}
+  ```cpp
+  TVirtualMCApplication(origin.GetName(),origin.GetTitle()),
+  ```
 
 - Check the existence of `TMCRootManager` in `YourSD::Initialize()` as when running in MT mode the `TMCRootManager` is not instantiated on master but only on workers.
-  {{< highlight cpp >}}
-if ( TMCRootManager::Instance() ) Register();
-  {{< /highlight >}}
+  ```cpp
+  if ( TMCRootManager::Instance() ) Register();
+  ```
 
 - The `vmc` package provides a locking mechanism similar to
   `G4AutoLock`, which can be used in the user application for handling 
   the operations which are not thread-safe. (It is not demonstrated in 
   the VMC examples, as there is no such use case where locking
   would be needed.)
-  {{< highlight cpp >}}
-// An example of use TMCAutoLock in UserClass.cxx
+  ```cpp
+  // An example of use TMCAutoLock in UserClass.cxx
 
-// Define mutex in a file scope 
-namespace {
-  // Mutex to lock application when performing not thread-safe operation
-  TMCMutex unsafeOperationMutex = TMCMUTEX_INITIALIZER;
-}  
+  // Define mutex in a file scope
+  namespace {
+    // Mutex to lock application when performing not thread-safe operation
+    TMCMutex unsafeOperationMutex = TMCMUTEX_INITIALIZER;
+  }
 
-// In a function where unsafeOperation() is called
-{ ...
-  TMCAutoLock lm(&unsafeOperationMutex);
-  unsafeOperation();
-  lm.unlock();
-  ...
-}
-  {{< /highlight >}}
+  // In a function where unsafeOperation() is called
+  { ...
+    TMCAutoLock lm(&unsafeOperationMutex);
+    unsafeOperation();
+    lm.unlock();
+    ...
+  }
+  ```

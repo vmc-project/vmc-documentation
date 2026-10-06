@@ -15,9 +15,9 @@ command line scoring (see details in the Geant4 Application developers Guide,
 
 The activation should be done via calling
 
-{{< highlight cpp >}}
+```cpp
 void TG4RunConfiguration::SetUseOfG4Scoring()
-{{< /highlight >}}
+```
 
 in the user `g4Config.C`.
 

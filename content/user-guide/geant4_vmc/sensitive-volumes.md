@@ -22,9 +22,9 @@ void TVirtualMC::SetSensitiveDetector(
 	TVirtualMCSensitiveDetector* userSD);
 ```
 Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and `MCApplication::Stepping()` using the function
-{{< highlight cpp >}}
+```cpp
 void TVirtualMC::SetExclusiveSDScoring(Bool_t);
-{{< /highlight >}}
+```
 If exclusive scoring is selected, the `MCApplication::Stepping()` is not called by MC.
 
 To demonstrate the usage of this new interfaces the **E03 example** was split in two variants:
@@ -51,10 +51,10 @@ The selection of sensitive volumes can be done in two ways:
    /mcDet/setSDSelectionFromTGeo true
    ```
    The volumes in TGeo geometry are set sensitive by setting the option "SV" to TGeoVolume objects: 
-   {{< highlight cpp >}}
-TGeoVolume* myVolume = ...;
-myVolume->SetOption("SV");
-   {{< /highlight >}}
+   ```cpp
+   TGeoVolume* myVolume = ...;
+   myVolume->SetOption("SV");
+   ```
    User can also choose a different string than "SV" for sensitive volumes labeling. In this case, they have to notify Geant4 VMC about the label via the Geant4 VMC command: 
    ```
    /mcDet/setSVLabel MyLabel
